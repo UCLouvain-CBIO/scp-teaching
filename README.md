@@ -1,2 +1,1 @@
-# scp-teaching
-scp teaching material
+# `scp` teaching material
