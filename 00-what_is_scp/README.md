@@ -6,6 +6,7 @@ Requirements:
 
 ```r
 install.packages("xaringan")
+install.packages("xaringanExtra")
 install.packages("xaringanthemer")
 ```
 

@@ -9,13 +9,19 @@ output:
     nature:
       highlightStyle: github
       highlightLines: true
-      countIncrementalSlides: false
+      ratio: 16:9
+      countIncrementalSlides: true
 ---
 
-```{r setup, include=FALSE}
+```{r theme, echo=FALSE}
 xaringanthemer::style_mono_light(base_color = "#23395b")
-options(htmltools.dir.version = FALSE)
 ```
+
+```{r xaringanExtra, echo=FALSE}
+xaringanExtra::use_webcam()    ## use w to turn on webcam
+xaringanExtra::use_tile_view() ## use o to get an overview
+```
+
 
 class: middle
 name: cc-by
