@@ -60,7 +60,7 @@ class: middle
   the R language for statistical computing and is operated through the
   R environment.
 
-- It is part of the [Bioconductor](http://www.bioconductor.org)
+- It is part of the [Bioconductor](http://www.bioconductor.org/packages/scp)
   package - it is interoperable and thus benefits from numerous of
   software for the analysis of omics data, such as for example
   proteomcs of single cell transcriptomics.
@@ -77,7 +77,8 @@ class: middle
 
 The **scp**
 
-- paper (Vanderaa and Gatto, bioRXiv, 2021)
+- pre-print ([Vanderaa and Gatto, bioRXiv,
+  2021](https://www.biorxiv.org/content/10.1101/2021.04.12.439408v1))
 - webpage at https://UCLouvain-CBIO.github.io/scp
 - package vignettes (accessible from the webpage)
 - online tutorial (see later)
@@ -106,7 +107,9 @@ class: middle
 
 ### Are there any alternatives to scp?
 
-The closest to **scp** is the python-based `Sceptre`.
+The closest to **scp** is the python-based `SCeptre` ([Schoof *et
+al.*, 2021](https://www.nature.com/articles/s41467-021-23667-y)),
+although it isn't as advances as **scp**.
 
 ---
 class: middle, center, inverse
