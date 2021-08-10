@@ -1,6 +1,4 @@
-# `scp` teaching material
-
-## Slides
+# Slides
 
 - [What is scp](http://bit.ly/what_is_scp) is a general introduction
   to the `scp` package, how test it, and where to find help and more
@@ -12,7 +10,7 @@
 
 - [Data processing with `scp`]()
 
-## Workshop
+# Workshop
 
 - [Single-cell proteomics data analysis using `QFeatures` and
   `scp`](https://lgatto.github.io/QFeaturesScpWorkshop2021/) delivered
