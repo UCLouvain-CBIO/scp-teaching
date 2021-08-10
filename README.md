@@ -5,7 +5,7 @@
   information.
 
 - [Handling quantitative proteomics
-  features?](http://bit.ly/qfeature_intro) demonstrating the managing
+  features?](http://bit.ly/qfeatures_intro) demonstrating the managing
   of quantitative proteomcis features.
 
 - TODO [Reading `scp` data]()
