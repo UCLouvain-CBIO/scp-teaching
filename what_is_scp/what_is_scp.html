@@ -4,7 +4,7 @@
     <title>What is scp?</title>
     <meta charset="utf-8" />
     <meta name="author" content="Laurent Gatto and Christophe Vanderaa" />
-    <script src="what_is_scp_files/header-attrs-2.10/header-attrs.js"></script>
+    <script src="what_is_scp_files/header-attrs-2.9/header-attrs.js"></script>
     <script src="what_is_scp_files/xaringanExtra-webcam-0.0.1/webcam.js"></script>
     <script id="xaringanExtra-webcam-options" type="application/json">{"width":"200","height":"200","margin":"1em"}</script>
     <link href="what_is_scp_files/tile-view-0.2.6/tile-view.css" rel="stylesheet" />
@@ -32,7 +32,7 @@ class: center, middle, inverse, title-slide
 class: middle
 name: cc-by
 
-### Get the slides at [http://bit.ly/what-is-scp](http://bit.ly/what-is-scp)
+### Get the slides at [http://bit.ly/what_is_scp](http://bit.ly/what_is_scp)
 
 These slides are available under a **creative common
 [CC-BY license](http://creativecommons.org/licenses/by/4.0/)**. You are
@@ -56,14 +56,16 @@ class: middle
 - **scp** stands for *single cell proteomics*.
 
 - **scp** is a piece of software to process, analyse and interpret
-  mass spectrometry-based single cell protemics data.
+  mass spectrometry-based *single cell protemics* data.
 
-- It is an R package: it is implemented in the R language for
-  statistical computing and is operated through the R environment.
+- It is an [R](http://r-project.org) package - it is implemented in
+  the R language for statistical computing and is operated through the
+  R environment.
 
-- It is part of the Bioconductor package: it is interoperable and thus
-  benefits from numerous of software for the analysis of omics data,
-  such as for example proteomcs of single cell transcriptomics.
+- It is part of the [Bioconductor](http://www.bioconductor.org)
+  package - it is interoperable and thus benefits from numerous of
+  software for the analysis of omics data, such as for example
+  proteomcs of single cell transcriptomics.
 
 ---
 class: middle, center, inverse
@@ -81,7 +83,6 @@ The **scp**
 - webpage at https://UCLouvain-CBIO.github.io/scp
 - package vignettes (accessible from the webpage)
 - online tutorial (see later)
-
 
 ---
 class: middle, center, inverse
@@ -109,6 +110,20 @@ class: middle
 
 The closest to **scp** is the python-based `Sceptre`.
 
+---
+class: middle, center, inverse
+
+# Is single cell any different than bulk proteomics data analysis?
+
+---
+class: middle
+
+### Is single cell any different than bulk proteomics data analysis?
+
+- batch effects
+- missing values
+- and their interaction
+- ...
 
 ---
 class: middle, center, inverse
@@ -131,7 +146,6 @@ BiocManager::install("scpdata")
 BiocManager::install("scp")
 ```
 
-
 ---
 class: middle, center, inverse
 
@@ -142,10 +156,7 @@ class: middle
 
 ### Can I test it without installing it?
 
-Yes!
-
-See https://lgatto.github.io/QFeaturesScpWorkshop2021/
-
+Yes! See https://lgatto.github.io/QFeaturesScpWorkshop2021/
 
 ---
 class: middle, center, inverse
@@ -169,7 +180,7 @@ class: middle
 
 ### Do I need to be a programmer/statistician/bioinformatician ...?
 
-No, you **only** want to be able to analyse and understand you data!
+No, you **only** need to be keen to analyse and understand you data!
 
 ---
 class: middle, center, inverse
@@ -181,8 +192,8 @@ class: middle
 
 ### Where can I get help?
 
-- The **scp** github repository: http://github.com/UCLouvain-CBIO/scp/issues
 - The Bioconductor support site: http://support.bioconductor.org
+- The **scp** github issues: http://github.com/UCLouvain-CBIO/scp/issues
 - Regular workshops we teach
 
 ---
@@ -198,7 +209,6 @@ class: middle
 - Try it out, locally or in the cloud.
 - Check the documentation.
 - Ask questions!
-
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>

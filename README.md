@@ -4,7 +4,7 @@
   to the `scp` package, how test it, and where to find help and more
   information.
 
-- TODO [QFeatures]()
+- TODO [Introduction to QFeatures]()
 
 - TODO [Reading `scp` data]()
 
