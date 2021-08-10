@@ -60,10 +60,11 @@ class: middle
   the R language for statistical computing and is operated through the
   R environment.
 
-- It is part of the [Bioconductor](http://www.bioconductor.org/packages/scp)
-  package - it is interoperable and thus benefits from numerous of
-  software for the analysis of omics data, such as for example
-  proteomcs of single cell transcriptomics.
+- It is part of
+  [Bioconductor](http://www.bioconductor.org/packages/scp) - it is
+  interoperable and thus benefits from numerous of software for the
+  analysis of omics data, such as for example proteomcs of single cell
+  transcriptomics.
 
 ---
 class: middle, center, inverse
