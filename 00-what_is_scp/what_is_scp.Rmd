@@ -20,7 +20,7 @@ options(htmltools.dir.version = FALSE)
 class: middle
 name: cc-by
 
-### Get the slides at [http://bit.ly/what-is-scp](http://bit.ly/what-is-scp).
+### Get the slides at [http://bit.ly/what-is-scp](http://bit.ly/what-is-scp)
 
 These slides are available under a **creative common
 [CC-BY license](http://creativecommons.org/licenses/by/4.0/)**. You are
