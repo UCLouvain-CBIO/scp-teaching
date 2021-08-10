@@ -4,7 +4,9 @@
   to the `scp` package, how test it, and where to find help and more
   information.
 
-- TODO [Introduction to QFeatures]()
+- [Handling quantitative proteomics
+  features?](http://bit.ly/qfeature_intro) demonstrating the managing
+  of quantitative proteomcis features.
 
 - TODO [Reading `scp` data]()
 
