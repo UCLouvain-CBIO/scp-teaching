@@ -18,8 +18,12 @@ xaringanthemer::style_mono_light(base_color = "#23395b")
 ```
 
 ```{r xaringanExtra, echo=FALSE}
-xaringanExtra::use_webcam()    ## use w to turn on webcam
-xaringanExtra::use_tile_view() ## use o to get an overview
+xaringanExtra::use_webcam()     ## use w to turn on webcam
+xaringanExtra::use_tile_view()  ## use o to get an overview
+xaringanExtra::use_fit_screen() ## use Alt-F to fit to screen
+xaringanExtra::use_extra_styles(
+  hover_code_line = TRUE
+)
 ```
 
 

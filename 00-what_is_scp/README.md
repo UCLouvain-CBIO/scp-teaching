@@ -13,5 +13,5 @@ install.packages("xaringanthemer")
 Build:
 
 ```r
-rmarkdown::render('what_is_scp.Rmd')
+rmarkdown::render('what_is_scp.Rmd', output_format = "xaringan::moon_reader")
 ```
