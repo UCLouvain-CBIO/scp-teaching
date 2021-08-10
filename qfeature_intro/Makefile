@@ -1,12 +1,6 @@
-%.html: %.Rmd
-	Rscript -e "rmarkdown::render('$^', output_format = 'xaringan::moon_reader')"
+include ../Makefile
 
-web:
-	cp *.html ../docs/.
-	cp xaringan-themer.css ../docs/.
-	cp -r *_files ../docs/.
-
-
-clean:
-	rm *.html xaringan-themer.css
-	rm -r *_files
+qfeatures_intro:
+	make qfeatures_intro.html
+	make web
+	make clean
