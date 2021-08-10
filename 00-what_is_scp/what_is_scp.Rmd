@@ -1,11 +1,11 @@
 ---
-title: "What is `scp`"
+title: "What is scp?"
 subtitle: ""
 author: "Laurent Gatto and Christophe Vanderaa"
 date: "2021/08/10"
 output:
   xaringan::moon_reader:
-    css: ["default", "default-fonts", "my.css"]
+    css: xaringan-themer.css
     nature:
       highlightStyle: github
       highlightLines: true
@@ -13,6 +13,7 @@ output:
 ---
 
 ```{r setup, include=FALSE}
+xaringanthemer::style_mono_light(base_color = "#23395b")
 options(htmltools.dir.version = FALSE)
 ```
 
@@ -32,16 +33,18 @@ any purpose, even commercially
 ---
 class: middle, center, inverse
 
-# What is `scp`?
+# What is scp?
 
 ---
 
 class: middle
 
-### What is `scp`?
+### What is scp?
 
-- `scp` is a pice of software to process, analyse and interpret mass
-  spectrometry-based single cell protemics data.
+- **scp** stands for *single cell proteomics*.
+
+- **scp** is a piece of software to process, analyse and interpret
+  mass spectrometry-based single cell protemics data.
 
 - It is an R package: it is implemented in the R language for
   statistical computing and is operated through the R environment.
@@ -53,14 +56,14 @@ class: middle
 ---
 class: middle, center, inverse
 
-# How to learn about/get started with `scp`?
+# How to learn about/get started with scp?
 
 ---
 class: middle
 
-### How to learn about/get started with `scp`?
+### How to learn about/get started with scp?
 
-The `scp`
+The **scp**
 
 - paper (Vanderaa and Gatto, bioRXiv, 2021)
 - webpage at https://UCLouvain-CBIO.github.io/scp
@@ -78,32 +81,32 @@ class: middle
 
 ### Is it like ... (insert your favourite software)?
 
-No, `scp` will give you more flexibility than any other software and
+No, **scp** will give you more flexibility than any other software and
 functionality dedicated to mass spectrometry-based single cell
 proteomics.
 
 ---
 class: middle, center, inverse
 
-# Are there any alternatives to `scp`?
+# Are there any alternatives to scp?
 
 ---
 class: middle
 
-### Are there any alternatives to `scp`?
+### Are there any alternatives to scp?
 
-The closest to `scp` is the python-based `Sceptre`.
+The closest to **scp** is the python-based `Sceptre`.
 
 
 ---
 class: middle, center, inverse
 
-# How to install `scp` (and its dependencies)?
+# How to install scp (and its dependencies)?
 
 ---
 class: middle
 
-### How to install `scp` (and its dependencies)?
+### How to install scp (and its dependencies)?
 
 Install R and RStudio and execute
 
@@ -165,7 +168,7 @@ class: middle
 
 ### Where can I get help?
 
-- The `scp` github repository: http://github.com/UCLouvain-CBIO/scp/issues
+- The **scp** github repository: http://github.com/UCLouvain-CBIO/scp/issues
 - The Bioconductor support site: http://support.bioconductor.org
 - Regular workshops we teach
 
@@ -182,3 +185,4 @@ class: middle
 - Try it out, locally or in the cloud.
 - Check the documentation.
 - Ask questions!
+
