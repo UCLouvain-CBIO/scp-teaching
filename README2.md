@@ -7,3 +7,6 @@
    URLs in the Rmd).
 4. Update the main `README.md` file with links to your slides.
 5. Push your source files and content of `docs` to GitHub.
+
+See the `Makefile` at the root of the repository and the respective
+slide directories for details.
