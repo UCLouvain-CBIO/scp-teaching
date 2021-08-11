@@ -210,3 +210,9 @@ class: middle
 - Try it out, locally or in the cloud.
 - Check the documentation.
 - Ask questions!
+
+### Funding
+
+Fonds de la Recherche Scientifique (FNRS), Belgium
+
+

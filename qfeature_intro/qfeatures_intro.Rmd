@@ -73,8 +73,9 @@ class: middle
 - One or more PSMs are aggregated into peptides.
 - One or more peptides are aggregated into protein groups.
 
-QFeatures does this in a consistent and reproducible way and records
-these steps, so that one can easily track features across levels.
+**QFeatures** does this in a consistent and reproducible way and
+records these steps, so that one can easily track features across
+levels.
 
 
 ---
@@ -105,6 +106,7 @@ function.
 
 .panel[.panel-name[assay]
 
+TODO
 
 ]
 ]
