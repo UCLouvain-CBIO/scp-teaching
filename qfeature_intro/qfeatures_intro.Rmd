@@ -55,10 +55,9 @@ class: middle
 - An R/[Bioconductor](http://www.bioconductor.org/packages/QFeatures)
   *package* to process and manage quantitative proteomics data.
 
-- The *class*, i.e. the computational object that will hold the
-  quantitative (single cell) proteomics data and that will take
-  **track** of it during its processing.
-
+- A *class*, i.e. the container that will hold the quantitative
+  (single cell) proteomics data and that will **track** and **record**
+  the processing steps.
 
 ---
 class: middle, center, inverse
@@ -67,6 +66,9 @@ class: middle, center, inverse
 
 ---
 class: middle
+
+
+.pull-left[
 
 ### Feature aggregation in proteomics
 
@@ -77,6 +79,15 @@ class: middle
 records these steps, so that one can easily **track** features across
 levels.
 
+]
+
+.pull-right[
+
+```{r echo=FALSE}
+knitr::include_graphics('https://rformassspectrometry.github.io/QFeatures/articles/QFeatures_files/figure-html/featuresplot-1.png')
+```
+
+]
 
 ---
 class: middle, center, inverse
@@ -109,7 +120,7 @@ function.
 ```{r, echo = FALSE}
 suppressPackageStartupMessages(library("QFeatures"))
 data(feat1)
-DT::datatable(cbind(assay(feat1[[1]]), data.frame('.' = rep("", 10)), rowData(feat1[[1]])))
+DT::datatable(cbind(assay(feat1[[1]]), data.frame('...' = rep("", 10)), rowData(feat1[[1]])))
 ```
 
 ]

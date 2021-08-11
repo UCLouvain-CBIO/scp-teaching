@@ -8,7 +8,7 @@
    version="1.1"
    id="svg5016"
    inkscape:version="1.1 (c4e8f9ed74, 2021-05-24)"
-   sodipodi:docname="qf2.svg"
+   sodipodi:docname="qfeatures_intro_2.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -127,16 +127,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="25.232601"
-     inkscape:cx="-6.2221093"
-     inkscape:cy="346.83305"
+     inkscape:zoom="0.78851878"
+     inkscape:cx="-12.682006"
+     inkscape:cy="98.919647"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1920"
-     inkscape:window-height="1038"
-     inkscape:window-x="0"
-     inkscape:window-y="20"
+     inkscape:window-width="1510"
+     inkscape:window-height="925"
+     inkscape:window-x="187"
+     inkscape:window-y="60"
      inkscape:window-maximized="1"
      inkscape:pagecheckerboard="0" />
   <metadata
@@ -158,29 +158,29 @@
      transform="translate(-0.15928027,-0.0736303)">
     <path
        style="fill:none;stroke:#000000;stroke-width:0.6;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Send-9)"
-       d="M 31.248345,70.853728 H 66.350769"
+       d="M 31.248345,73.210292 H 66.350769"
        id="path1214-0"
        inkscape:connector-curvature="0" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.6;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Send-1)"
-       d="M 31.373716,42.929493 H 66.47614"
+       d="M 31.373716,44.057441 H 66.47614"
        id="path1214-7"
        inkscape:connector-curvature="0" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.6;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Send)"
-       d="M 31.130626,21.295319 H 66.23305"
+       d="M 31.130626,22.721223 H 66.23305"
        id="path1214"
        inkscape:connector-curvature="0" />
     <text
        id="text108"
        style="font-variant:normal;font-weight:normal;font-size:5.4831px;font-family:'DejaVu Sans';-inkscape-font-specification:DejaVuSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.352778"
        x="2.8523262"
-       y="41.921272"><tspan
+       y="24.714264"><tspan
          style="stroke-width:0.352778"
          id="tspan106"
          sodipodi:role="line"
          x="2.8523262"
-         y="41.921272">PSM1</tspan></text>
+         y="24.714264">PSM1</tspan></text>
     <path
        d="M 0.26629227,11.271109 H 181.43287 V 90.093626 H 0.26629227 Z"
        style="fill:none;stroke:#000000;stroke-width:0.187866;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:3.5;stroke-dasharray:none;stroke-opacity:1"
@@ -296,23 +296,23 @@
     <text
        id="text108-35"
        style="font-variant:normal;font-weight:normal;font-size:5.4831px;font-family:'DejaVu Sans';-inkscape-font-specification:DejaVuSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.352778"
-       x="5.1901231"
-       y="63.465393"><tspan
+       x="3.602623"
+       y="46.050484"><tspan
          style="stroke-width:0.352778"
          id="tspan106-6"
          sodipodi:role="line"
-         x="5.1901231"
-         y="63.465393">PSM2</tspan></text>
+         x="3.602623"
+         y="46.050484">PSM2</tspan></text>
     <text
        id="text108-2"
        style="font-variant:normal;font-weight:normal;font-size:5.4831px;font-family:'DejaVu Sans';-inkscape-font-specification:DejaVuSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.352778"
-       x="7.4910865"
-       y="87.151825"><tspan
+       x="6.9619198"
+       y="75.203331"><tspan
          style="stroke-width:0.352778"
          id="tspan106-9"
          sodipodi:role="line"
-         x="7.4910865"
-         y="87.151825">PSM3</tspan></text>
+         x="6.9619198"
+         y="75.203331">PSM3</tspan></text>
     <g
        id="g1132"
        transform="translate(-74.612504,-37.041666)">
@@ -393,12 +393,12 @@
        id="text108-0"
        style="font-variant:normal;font-weight:normal;font-size:5.4831px;font-family:'DejaVu Sans';-inkscape-font-specification:DejaVuSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.352778"
        x="87.018646"
-       y="23.309969"><tspan
+       y="24.146677"><tspan
          style="stroke-width:0.352778"
          id="tspan106-93"
          sodipodi:role="line"
          x="87.018646"
-         y="23.309969">Pep1</tspan></text>
+         y="24.146677">Pep1</tspan></text>
     <text
        id="text108-0-6"
        style="font-variant:normal;font-weight:normal;font-size:5.4831px;font-family:'DejaVu Sans';-inkscape-font-specification:DejaVuSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.352778"
@@ -413,11 +413,11 @@
        id="text108-0-62"
        style="font-variant:normal;font-weight:normal;font-size:5.4831px;font-family:'DejaVu Sans';-inkscape-font-specification:DejaVuSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.352778"
        x="87.018646"
-       y="75.421127"><tspan
+       y="74.67189"><tspan
          style="stroke-width:0.352778"
          id="tspan106-93-6"
          sodipodi:role="line"
          x="87.018646"
-         y="75.421127">Pep3</tspan></text>
+         y="74.67189">Pep3</tspan></text>
   </g>
 </svg>
