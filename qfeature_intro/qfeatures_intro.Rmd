@@ -74,3 +74,87 @@ class: middle
 
 QFeatures does this in a consistent and reproducible way and records
 these steps, so that one can easily track features across levels.
+
+
+---
+class: middle, center, inverse
+
+# What happens under the hood?
+
+---
+class: middle
+
+A **QFeatures** object containing three assays, named PSM1, PSM2 and
+PSM3. Each assay contains quantitative data for a set of features
+(rows) and samples (columns). The **QFeatures** object also contains
+sample annotations matching columns across all assyas.
+
+![](./figs/qf1.svg)
+
+Such a **QFeatures** object can be created with the [`readSCP()`]()
+function.
+
+---
+class: middle
+
+![](./figs/qf2.svg)
+
+```{r, eval = FALSE}
+qf <- aggregateFeaturesOverAssays(qf,
+                                  i = c("PSM1", "PSM2", "PSM3"),    ## assays to be aggregated
+                                  name = c("Pep1", "Pep2", "Pep3"), ## new assay name
+                                  fcol = "peptide",                 ## what to aggregate
+                                  fun = colMedians)                 ## how to aggregate
+```
+
+---
+class: middle
+
+![](./figs/qf3.svg)
+
+```{r, eval = FALSE}
+qf <- joinAssays(qf,
+                 c("Pep1", "Pep2", "Pep3"), ## assays to be joined
+                 name = "Peptides")         ## new assay name
+```
+
+---
+class: middle
+
+![](./figs/qf4.svg)
+
+```{r, eval = FALSE}
+qf <- aggregateFeatures(qf,
+                        "Peptides",        ## assay to be aggregated
+                        "Protein",         ## new assay name
+                        name = "proteins", ## what to aggregate
+                        fun = colMedians)  ## how to aggregate
+
+```
+
+---
+class: middle, center, inverse
+
+# More with QFeatures and scp
+
+---
+class: middle
+
+### More with QFeatures and scp
+
+- quality control
+- feature and sample filtering
+- transformation and normalisation
+- imputation
+- batch correction
+- visualisaton
+- the full R/Bioconductor  statistical learning toolkit
+
+---
+class: middle
+
+### Further information
+
+- The **QFeatures** webpage:
+- The **QFeatures** webpage:
+- Online tutotial:
