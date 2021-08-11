@@ -36,7 +36,7 @@ library(DT)
 class: middle
 name: cc-by
 
-### Get the slides at [http://bit.ly/read_scp_data](http://bit.ly/read_scp_data)
+### Get the slides at [https://bit.ly/read_scp_data](https://bit.ly/read_scp_data)
 
 These slides are available under a **creative common
 [CC-BY license](http://creativecommons.org/licenses/by/4.0/)**. You are
