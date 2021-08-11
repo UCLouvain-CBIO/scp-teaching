@@ -1,6 +1,6 @@
 ## Introduction to `QFeatures`
 
-A short slide teck that introduces the package.
+A short slide deck that introduces the package.
 
 Requirements:
 
