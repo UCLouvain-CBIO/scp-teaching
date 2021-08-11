@@ -113,6 +113,20 @@ DT::datatable(cbind(assay(feat1[[1]]), data.frame('.' = rep("", 10)), rowData(fe
 ```
 
 ]
+
+.panel[.panel-name[colData]
+
+```{r, echo = FALSE}
+cd <- data.frame(sample = paste0("S", 1:36),
+                 LC_batch = rep(paste0("LC", 1:3), each = 12),
+                 type = rep(c("carrier", "empty", "cellA", "cellB", "cellC",
+                              "blank", "cellA", "cellB", "cellC",
+                              "cellA", "cellB", "cellC"), 3))
+DT::datatable(cd)
+```
+
+]
+
 ]
 ---
 class: 

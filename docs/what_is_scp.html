@@ -64,19 +64,19 @@ class: middle
 
 - It is part of
   [Bioconductor](http://www.bioconductor.org/packages/scp) - it is
-  interoperable and thus benefits from numerous of software for the
-  analysis of omics data, such as for example proteomcs of single cell
-  transcriptomics.
+  interoperable and thus benefits from numerous software for the
+  analysis of omics data, such as proteomics or single cell
+  transcriptomics, ...
 
 ---
 class: middle, center, inverse
 
-# Get started with scp?
+# How to get started with scp?
 
 ---
 class: middle
 
-### Get started with scp?
+### How to get started with scp?
 
 The **scp**
 
@@ -123,10 +123,11 @@ class: middle
 
 ### Do we need dedicated single cell data analysis/software?
 
-- batch effects
-- missing values
-- and their interaction
-- ...
+- Batch effects
+- Missing values
+- And their interaction (see [Vanderaa and Gatto, bioRXiv,
+  2021](https://www.biorxiv.org/content/10.1101/2021.04.12.439408v1))
+- Dedicated downstream analyses (see Bioconductor)
 
 ---
 class: middle, center, inverse
@@ -143,7 +144,7 @@ Install R and RStudio and execute
 
 ```r
 if (!require("BiocManager"))
-    install.packages("BiocManacer")
+    install.packages("BiocManager")
 
 BiocManager::install("scpdata")
 BiocManager::install("scp")
