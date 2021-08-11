@@ -4,13 +4,15 @@
     <title>Handling quantitative proteomics features?</title>
     <meta charset="utf-8" />
     <meta name="author" content="Laurent Gatto and Christophe Vanderaa" />
-    <script src="qfeatures_intro_files/header-attrs-2.9/header-attrs.js"></script>
+    <script src="qfeatures_intro_files/header-attrs-2.10/header-attrs.js"></script>
     <script src="qfeatures_intro_files/xaringanExtra-webcam-0.0.1/webcam.js"></script>
     <script id="xaringanExtra-webcam-options" type="application/json">{"width":"200","height":"200","margin":"1em"}</script>
     <link href="qfeatures_intro_files/tile-view-0.2.6/tile-view.css" rel="stylesheet" />
     <script src="qfeatures_intro_files/tile-view-0.2.6/tile-view.js"></script>
     <script src="qfeatures_intro_files/xaringanExtra_fit-screen-0.2.6/fit-screen.js"></script>
     <link href="qfeatures_intro_files/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
+    <link href="qfeatures_intro_files/panelset-0.2.6/panelset.css" rel="stylesheet" />
+    <script src="qfeatures_intro_files/panelset-0.2.6/panelset.js"></script>
     <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
   </head>
   <body>
@@ -53,8 +55,8 @@ class: middle
 
 ### What is QFeatures?
 
-- An R/[Bioconductor](http://www.bioconductor.org/packages/QFeatures) package to process and manage quantitative
-  proteomics data.
+- An R/[Bioconductor](http://www.bioconductor.org/packages/QFeatures)
+  *package* to process and manage quantitative proteomics data.
 
 - The *class*, i.e. the computational object that will hold the
   quantitative (single cell) proteomics data and that will take track
@@ -76,6 +78,110 @@ class: middle
 
 QFeatures does this in a consistent and reproducible way and records
 these steps, so that one can easily track features across levels.
+
+
+---
+class: middle, center, inverse
+
+# What happens under the hood?
+
+---
+class: 
+
+
+.panelset[
+.panel[.panel-name[QFeatures]
+
+A **QFeatures** object containing three **assays**, named PSM1, PSM2
+and PSM3. Each assay contains quantitative data for a set of features
+(rows) and samples (columns). The **QFeatures** object also contains
+sample annotations matching columns across all assays.
+
+&lt;img src="./figs/qf1.svg" width="70%" style="display: block; margin: auto;" /&gt;
+
+Such a **QFeatures** object can be created with the [`readSCP()`]()
+function.
+
+]
+
+.panel[.panel-name[assay]
+
+
+]
+]
+---
+class: 
+
+#### Aggregating PSMs to peptides
+
+
+&lt;img src="./figs/qf2.svg" style="display: block; margin: auto;" /&gt;
+
+
+```r
+qf &lt;- aggregateFeaturesOverAssays(qf,
+                                  i = c("PSM1", "PSM2", "PSM3"),    ## assays to be aggregated
+                                  name = c("Pep1", "Pep2", "Pep3"), ## new assay name
+                                  fcol = "peptide",                 ## what to aggregate
+                                  fun = colMedians)                 ## how to aggregate
+```
+
+---
+class: 
+
+#### Joining peptide assays
+
+&lt;img src="./figs/qf3.svg" style="display: block; margin: auto;" /&gt;
+
+
+```r
+qf &lt;- joinAssays(qf,
+                 c("Pep1", "Pep2", "Pep3"), ## assays to be joined
+                 name = "Peptides")         ## new assay name
+```
+
+---
+class: 
+
+#### Aggregate peptides into proteins
+
+&lt;img src="./figs/qf4.svg" style="display: block; margin: auto;" /&gt;
+
+
+```r
+qf &lt;- aggregateFeatures(qf,
+                        "Peptides",        ## assay to be aggregated
+                        "Protein",         ## new assay name
+                        name = "proteins", ## what to aggregate
+                        fun = colMedians)  ## how to aggregate
+```
+
+---
+class: middle, center, inverse
+
+# More with QFeatures and scp
+
+---
+class: middle
+
+### More with QFeatures and scp
+
+- quality control
+- feature and sample filtering
+- transformation and normalisation
+- imputation
+- batch correction
+- visualisaton
+- the full R/Bioconductor  statistical learning toolkit
+
+---
+class: middle
+
+### Further information
+
+- The **QFeatures** webpage: http://RforMassSpectrometry.github.io/QFeatures
+- The **scp** webpage: http://UCLouvain-CBIO.github.io/scp
+- Online tutotial: https://lgatto.github.io/QFeaturesScpWorkshop2021/
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
