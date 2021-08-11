@@ -23,7 +23,8 @@ xaringanExtra::use_tile_view()  ## use o to get an overview
 xaringanExtra::use_fit_screen() ## use Alt-F to fit to screen
 xaringanExtra::use_extra_styles(
   hover_code_line = TRUE
-)
+  )
+xaringanExtra::use_panelset()
 ```
 
 
@@ -51,8 +52,8 @@ class: middle
 
 ### What is QFeatures?
 
-- An R/[Bioconductor](http://www.bioconductor.org/packages/QFeatures) package to process and manage quantitative
-  proteomics data.
+- An R/[Bioconductor](http://www.bioconductor.org/packages/QFeatures)
+  *package* to process and manage quantitative proteomics data.
 
 - The *class*, i.e. the computational object that will hold the
   quantitative (single cell) proteomics data and that will take track
@@ -82,22 +83,40 @@ class: middle, center, inverse
 # What happens under the hood?
 
 ---
-class: middle
+class: 
 
-A **QFeatures** object containing three assays, named PSM1, PSM2 and
-PSM3. Each assay contains quantitative data for a set of features
+
+.panelset[
+.panel[.panel-name[QFeatures]
+
+A **QFeatures** object containing three **assays**, named PSM1, PSM2
+and PSM3. Each assay contains quantitative data for a set of features
 (rows) and samples (columns). The **QFeatures** object also contains
-sample annotations matching columns across all assyas.
+sample annotations matching columns across all assays.
 
-![](./figs/qf1.svg)
+```{r echo=FALSE, out.width='70%', fig.align = 'center'}
+knitr::include_graphics('./figs/qf1.svg')
+```
 
 Such a **QFeatures** object can be created with the [`readSCP()`]()
 function.
 
----
-class: middle
+]
 
-![](./figs/qf2.svg)
+.panel[.panel-name[assay]
+
+
+]
+]
+---
+class: 
+
+#### Aggregating PSMs to peptides
+
+
+```{r echo=FALSE, fig.align = 'center'}
+knitr::include_graphics('./figs/qf2.svg')
+```
 
 ```{r, eval = FALSE}
 qf <- aggregateFeaturesOverAssays(qf,
@@ -108,9 +127,13 @@ qf <- aggregateFeaturesOverAssays(qf,
 ```
 
 ---
-class: middle
+class: 
 
-![](./figs/qf3.svg)
+#### Joining peptide assays
+
+```{r echo=FALSE, fig.align = 'center'}
+knitr::include_graphics('./figs/qf3.svg')
+```
 
 ```{r, eval = FALSE}
 qf <- joinAssays(qf,
@@ -119,9 +142,13 @@ qf <- joinAssays(qf,
 ```
 
 ---
-class: middle
+class: 
 
-![](./figs/qf4.svg)
+#### Aggregate peptides into proteins
+
+```{r echo=FALSE, fig.align = 'center'}
+knitr::include_graphics('./figs/qf4.svg')
+```
 
 ```{r, eval = FALSE}
 qf <- aggregateFeatures(qf,
@@ -155,6 +182,6 @@ class: middle
 
 ### Further information
 
-- The **QFeatures** webpage:
-- The **QFeatures** webpage:
-- Online tutotial:
+- The **QFeatures** webpage: http://RforMassSpectrometry.github.io/QFeatures
+- The **scp** webpage: http://UCLouvain-CBIO.github.io/scp
+- Online tutotial: https://lgatto.github.io/QFeaturesScpWorkshop2021/
