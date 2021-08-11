@@ -8,8 +8,9 @@
   features?](http://bit.ly/qfeatures_intro) demonstrating the managing
   of quantitative proteomcis features.
 
-- The [Read `scp` data](http://bit.ly/read_scp_data) slide deck explains how to load data as a 
-  `QFeatures` object, listing requirements and showing an example. 
+- The [read single-cell proteomics data](http://bit.ly/read_scp_data)
+  slide deck explains how to load data as a `QFeatures` object, 
+  listing requirements and showing a real-case example. 
 
 - TODO [Data processing with `scp`]()
 
@@ -19,3 +20,4 @@
   `scp`](https://lgatto.github.io/QFeaturesScpWorkshop2021/) delivered
   at [Bioc2021](https://bioc2021.bioconductor.org/).
 
+    

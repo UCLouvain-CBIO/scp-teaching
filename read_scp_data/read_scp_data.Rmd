@@ -1,5 +1,5 @@
 ---
-title: "Reading SCP data"
+title: "Reading single-cell proteomics data"
 subtitle: ""
 author: "Laurent Gatto and Christophe Vanderaa"
 date: "2021/08/10"
@@ -57,13 +57,13 @@ any purpose, even commercially
 
 class: middle, center, inverse
 
-# How can I convert my SCP data to a QFeatures object?
+# How can I convert my single-cell proteomics data to a QFeatures object?
 
 ---
 
 class: middle
 
-## How can I convert my SCP data to a QFeatures object?
+## How can I convert my single-cell proteomics data to a QFeatures object?
 
 The `readSCP` function converts quantified MS data tables to
 `QFeatures` objects. 
@@ -324,8 +324,9 @@ class: middle
 
 ### Further information
 
-Learn more about loading SCP data as a `QFeatures` object in our
-dedicated vignette at https://uclouvain-cbio.github.io/scp/articles/read_scp.html.
+Learn more about loading single-cell proteomics data as a `QFeatures` 
+object in our dedicated vignette at 
+https://uclouvain-cbio.github.io/scp/articles/read_scp.html.
 
 ### Funding
 
