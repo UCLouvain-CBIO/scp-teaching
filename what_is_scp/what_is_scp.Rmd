@@ -69,20 +69,19 @@ class: middle
 ---
 class: middle, center, inverse
 
-# How to learn about/get started with scp?
+# Get started with scp?
 
 ---
 class: middle
 
-### How to learn about/get started with scp?
+### Get started with scp?
 
 The **scp**
 
-- pre-print ([Vanderaa and Gatto, bioRXiv,
+- Pre-print ([Vanderaa and Gatto, bioRXiv,
   2021](https://www.biorxiv.org/content/10.1101/2021.04.12.439408v1))
-- webpage at https://UCLouvain-CBIO.github.io/scp
-- package vignettes (accessible from the webpage)
-- online tutorial (see later)
+- Webpage and vignettes at https://UCLouvain-CBIO.github.io/scp
+- On-line tutorial at https://lgatto.github.io/QFeaturesScpWorkshop2021/
 
 ---
 class: middle, center, inverse
@@ -115,12 +114,12 @@ although it isn't as advances as **scp**.
 ---
 class: middle, center, inverse
 
-# Is single cell any different than bulk proteomics data analysis?
+# Do we need dedicated single cell data analysis/software?
 
 ---
 class: middle
 
-### Is single cell any different than bulk proteomics data analysis?
+### Do we need dedicated single cell data analysis/software?
 
 - batch effects
 - missing values

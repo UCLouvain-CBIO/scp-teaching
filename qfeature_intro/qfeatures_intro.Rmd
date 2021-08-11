@@ -74,7 +74,7 @@ class: middle
 - One or more peptides are aggregated into protein groups.
 
 **QFeatures** does this in a consistent and reproducible way and
-records these steps, so that one can easily track features across
+records these steps, so that one can easily **track** features across
 levels.
 
 
