@@ -62,19 +62,19 @@ class: middle
 
 - It is part of
   [Bioconductor](http://www.bioconductor.org/packages/scp) - it is
-  interoperable and thus benefits from numerous of software for the
-  analysis of omics data, such as for example proteomcs of single cell
-  transcriptomics.
+  interoperable and thus benefits from numerous software for the
+  analysis of omics data, such as proteomics or single cell
+  transcriptomics, ...
 
 ---
 class: middle, center, inverse
 
-# Get started with scp?
+# How to get started with scp?
 
 ---
 class: middle
 
-### Get started with scp?
+### How to get started with scp?
 
 The **scp**
 
