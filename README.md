@@ -17,3 +17,4 @@
 - [Single-cell proteomics data analysis using `QFeatures` and
   `scp`](https://lgatto.github.io/QFeaturesScpWorkshop2021/) delivered
   at [Bioc2021](https://bioc2021.bioconductor.org/).
+
