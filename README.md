@@ -8,7 +8,8 @@
   features?](http://bit.ly/qfeatures_intro) demonstrating the managing
   of quantitative proteomcis features.
 
-- TODO [Reading `scp` data]()
+- The [Read `scp` data](http://bit.ly/read_scp_data) slide deck explains how to load data as a 
+  `QFeatures` object, listing requirements and showing an example. 
 
 - TODO [Data processing with `scp`]()
 
