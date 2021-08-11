@@ -162,12 +162,16 @@ qf <- aggregateFeatures(qf,
 ---
 class: middle, center, inverse
 
-# Using tracked assays
+# Why tracking assays
 
 ---
 class: middle
 
-TOOD: add figure
+```{r echo=FALSE, fig.align = 'center', out.width = "90%"}
+knitr::include_graphics('https://rformassspectrometry.github.io/QFeatures/articles/QFeatures_files/figure-html/plotstat-1.png')
+```
+
+
 
 ---
 class: middle, center, inverse
@@ -194,4 +198,10 @@ class: middle
 
 - The **QFeatures** webpage: http://RforMassSpectrometry.github.io/QFeatures
 - The **scp** webpage: http://UCLouvain-CBIO.github.io/scp
-- Online tutotial: https://lgatto.github.io/QFeaturesScpWorkshop2021/
+- Online **tutotial**: https://lgatto.github.io/QFeaturesScpWorkshop2021/
+
+### Funding
+
+Fonds de la Recherche Scientifique (FNRS), Belgium
+
+
