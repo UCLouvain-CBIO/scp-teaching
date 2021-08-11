@@ -9,6 +9,7 @@ web:
 	cp *.html ../docs/.
 	cp xaringan-themer.css ../docs/.
 	cp -r *_files ../docs/.
+	cp -r figs/* ../docs/figs/.
 
 
 clean:

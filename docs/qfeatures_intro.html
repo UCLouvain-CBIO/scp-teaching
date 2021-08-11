@@ -97,7 +97,7 @@ and PSM3. Each assay contains quantitative data for a set of features
 (rows) and samples (columns). The **QFeatures** object also contains
 sample annotations matching columns across all assays.
 
-&lt;img src="./figs/qf1.svg" width="70%" style="display: block; margin: auto;" /&gt;
+&lt;img src="./figs/qfeatures_intro_1.svg" width="70%" style="display: block; margin: auto;" /&gt;
 
 Such a **QFeatures** object can be created with the [`readSCP()`]()
 function.
@@ -115,7 +115,7 @@ class:
 #### Aggregating PSMs to peptides
 
 
-&lt;img src="./figs/qf2.svg" style="display: block; margin: auto;" /&gt;
+&lt;img src="./figs/qfeatures_intro_2.svg" style="display: block; margin: auto;" /&gt;
 
 
 ```r
@@ -131,7 +131,7 @@ class:
 
 #### Joining peptide assays
 
-&lt;img src="./figs/qf3.svg" style="display: block; margin: auto;" /&gt;
+&lt;img src="./figs/qfeatures_intro_3.svg" style="display: block; margin: auto;" /&gt;
 
 
 ```r
@@ -145,7 +145,7 @@ class:
 
 #### Aggregate peptides into proteins
 
-&lt;img src="./figs/qf4.svg" style="display: block; margin: auto;" /&gt;
+&lt;img src="./figs/qfeatures_intro_4.svg" style="display: block; margin: auto;" /&gt;
 
 
 ```r
@@ -155,6 +155,16 @@ qf &lt;- aggregateFeatures(qf,
                         name = "proteins", ## what to aggregate
                         fun = colMedians)  ## how to aggregate
 ```
+
+---
+class: middle, center, inverse
+
+# Using tracked assays
+
+---
+class: middle
+
+TOOD: add figure
 
 ---
 class: middle, center, inverse

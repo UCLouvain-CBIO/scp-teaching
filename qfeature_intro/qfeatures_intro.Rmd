@@ -95,7 +95,7 @@ and PSM3. Each assay contains quantitative data for a set of features
 sample annotations matching columns across all assays.
 
 ```{r echo=FALSE, out.width='70%', fig.align = 'center'}
-knitr::include_graphics('./figs/qf1.svg')
+knitr::include_graphics('./figs/qfeatures_intro_1.svg')
 ```
 
 Such a **QFeatures** object can be created with the [`readSCP()`]()
@@ -115,7 +115,7 @@ class:
 
 
 ```{r echo=FALSE, fig.align = 'center'}
-knitr::include_graphics('./figs/qf2.svg')
+knitr::include_graphics('./figs/qfeatures_intro_2.svg')
 ```
 
 ```{r, eval = FALSE}
@@ -132,7 +132,7 @@ class:
 #### Joining peptide assays
 
 ```{r echo=FALSE, fig.align = 'center'}
-knitr::include_graphics('./figs/qf3.svg')
+knitr::include_graphics('./figs/qfeatures_intro_3.svg')
 ```
 
 ```{r, eval = FALSE}
@@ -147,7 +147,7 @@ class:
 #### Aggregate peptides into proteins
 
 ```{r echo=FALSE, fig.align = 'center'}
-knitr::include_graphics('./figs/qf4.svg')
+knitr::include_graphics('./figs/qfeatures_intro_4.svg')
 ```
 
 ```{r, eval = FALSE}
@@ -158,6 +158,16 @@ qf <- aggregateFeatures(qf,
                         fun = colMedians)  ## how to aggregate
 
 ```
+
+---
+class: middle, center, inverse
+
+# Using tracked assays
+
+---
+class: middle
+
+TOOD: add figure
 
 ---
 class: middle, center, inverse
