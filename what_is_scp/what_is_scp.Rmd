@@ -125,7 +125,7 @@ class: middle
 - Missing values
 - And their interaction (see [Vanderaa and Gatto, bioRXiv,
   2021](https://www.biorxiv.org/content/10.1101/2021.04.12.439408v1))
-- dedicated downstream analyses
+- Dedicated downstream analyses (see Bioconductor)
 
 ---
 class: middle, center, inverse
@@ -141,7 +141,7 @@ Install R and RStudio and execute
 
 ```{r, eval = FALSE}
 if (!require("BiocManager"))
-    install.packages("BiocManacer")
+    install.packages("BiocManager")
 
 BiocManager::install("scpdata")
 BiocManager::install("scp")
