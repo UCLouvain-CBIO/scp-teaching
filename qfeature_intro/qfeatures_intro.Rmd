@@ -56,8 +56,8 @@ class: middle
   *package* to process and manage quantitative proteomics data.
 
 - The *class*, i.e. the computational object that will hold the
-  quantitative (single cell) proteomics data and that will take track
-  of it during its processing.
+  quantitative (single cell) proteomics data and that will take
+  **track** of it during its processing.
 
 
 ---
