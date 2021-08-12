@@ -13,7 +13,6 @@ output:
       countIncrementalSlides: true
 ---
 
-
 ```{r theme, echo=FALSE}
 xaringanthemer::style_mono_light(base_color = "#23395b")
 ```
@@ -48,10 +47,10 @@ any purpose, even commercially
 ???
 ## Goals of the presentation
 
-- Understand how `readSCP` converts data tables into `QFeatures`
-- Understand what the minimal requirements are for using `readSCP`
+- Understand how `readSCP()` converts data tables into `QFeatures`
+- Understand what the minimal requirements are for using `readSCP()`
 - Understand the different pieces of information in a `QFeatures` object
-- Understand what `readSCP` does and how to use it 
+- Understand what `readSCP()` does and how to use it 
 
 ---
 
@@ -65,17 +64,17 @@ class: middle
 
 ## How can I convert my single-cell proteomics data to a QFeatures object?
 
-The `readSCP` function converts quantified MS data tables to
+The `readSCP()` function converts quantified MS data tables to
 `QFeatures` objects. 
 
 <br>
 ```{r echo=FALSE, out.width='90%', fig.align = 'center'}
-knitr::include_graphics('./figs/readSCP.svg')
+knitr::include_graphics('./figs/read_scp_data_readSCP.svg')
 ```
 
 ---
 
-class: middle
+class: 
 
 ## Feature data
 
@@ -84,7 +83,7 @@ class: middle
 .left-column[
 
 ```{r echo=FALSE, out.width='100%', fig.align = 'center'}
-knitr::include_graphics('./figs/featureData.png')
+knitr::include_graphics('./figs/read_scp_data_featureData.png')
 ```
 
 ]
@@ -123,7 +122,7 @@ datatable(mqScpData[1:8, selCols],
 
 ---
 
-class: middle
+class: 
 
 ## Sample annotation
 
@@ -132,7 +131,7 @@ class: middle
 .left-column[
 
 ```{r echo=FALSE, out.width='100%', fig.align = 'center'}
-knitr::include_graphics('./figs/sampleAnnotation.png')
+knitr::include_graphics('./figs/read_scp_data_sampleAnnotation.png')
 ```
 
 ]
@@ -177,7 +176,7 @@ class: middle, center, inverse
 
 ---
 
-class: middle
+class:
 
 ## What's happening under the hood?
 
@@ -186,7 +185,7 @@ class: middle
 .left-column[
 
 ```{r echo=FALSE, out.width='80%', fig.align = 'center'}
-knitr::include_graphics('./figs/step1.svg')
+knitr::include_graphics('./figs/read_scp_data_step1.svg')
 ```
 
 ]
@@ -205,7 +204,7 @@ This also separates the feature metadata from the quantitative data.
 .left-column[
 
 ```{r echo=FALSE, out.width='100%', fig.align = 'center'}
-knitr::include_graphics('./figs/step2.svg')
+knitr::include_graphics('./figs/read_scp_data_step2.svg')
 ```
 
 ]
@@ -222,7 +221,7 @@ sample.
 .pull-left[
 
 ```{r echo=FALSE, out.width='100%', fig.align = 'center'}
-knitr::include_graphics('./figs/step3.svg')
+knitr::include_graphics('./figs/read_scp_data_step3.svg')
 ```
 
 ]
@@ -243,7 +242,7 @@ performed based on the two **required** columns:
 .pull-left[
 
 ```{r echo=FALSE, out.width='80%', fig.align = 'center'}
-knitr::include_graphics('./figs/step4.svg')
+knitr::include_graphics('./figs/read_scp_data_step4.svg')
 ```
 
 ]
@@ -260,13 +259,13 @@ All the data pieces are wrapped in a `QFeatures` object.
 
 class: middle, center, inverse
 
-# readSCP in practice
+# readSCP() in practice
 
 ---
 
-class: middle
+class:
 
-## `readSCP` in practice
+## `readSCP()` in practice
 
 .panelset[
 .panel[.panel-name[Data]
