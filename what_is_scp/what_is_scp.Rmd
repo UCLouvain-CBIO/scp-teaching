@@ -75,18 +75,16 @@ class: middle, center, inverse
 
 
 ---
-
 class: middle
 
-How would you describe your level of familiarity with R and/or
-Bioconductor?
+### How would you describe your familiarity with R and/or Bioconductor?
 
 - What is he talking about?
 - I have heard about it, but never used it.
 - I have used R/Bioconductor in the past.
 - I use R/Bioconductor frequently.
 - No R/Bioconductor experience, but I use another command
-  line/scripting language (such as python, for example).
+  line/scripting language (such as python).
 
 
 ---
