@@ -262,7 +262,7 @@ knitr::include_graphics('./figs/read_scp_data_step4.svg')
 ]
 .pull-right[
 
-All the data pieces are wrapped in a `QFeatures` object.
+All the data pieces are wrapped into a `QFeatures` object.
 
 Overall, the `QFeatures` format enables seamless **data management and access**,
 important for **downstream** data processing and visualisation.
