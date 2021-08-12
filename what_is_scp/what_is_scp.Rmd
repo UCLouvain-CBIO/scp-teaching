@@ -45,6 +45,7 @@ class: middle, center, inverse
 
 # What is scp?
 
+
 ---
 
 class: middle
@@ -65,6 +66,28 @@ class: middle
   interoperable and thus benefits from numerous software for the
   analysis of omics data, such as proteomics or single cell
   transcriptomics, ...
+
+
+---
+class: middle, center, inverse
+
+# Quick survey
+
+
+---
+
+class: middle
+
+How would you describe your level of familiarity with R and/or
+Bioconductor?
+
+- What is he talking about?
+- I have heard about it, but never used it.
+- I have used R/Bioconductor in the past.
+- I use R/Bioconductor frequently.
+- No R/Bioconductor experience, but I use another command
+  line/scripting language (such as python, for example).
+
 
 ---
 class: middle, center, inverse
@@ -214,5 +237,3 @@ class: middle
 ### Funding
 
 Fonds de la Recherche Scientifique (FNRS), Belgium
-
-
