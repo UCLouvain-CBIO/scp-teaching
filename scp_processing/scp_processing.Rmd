@@ -42,7 +42,7 @@ knitr::opts_chunk$set(dpi = 300,
 class: middle
 name: cc-by
 
-### Get the slides at [https://bit.ly/??](https://bit.ly/??)
+### Get the slides at [https://bit.ly/scp_processing](https://bit.ly/scp_processing)
 
 These slides are available under a **creative common
 [CC-BY license](http://creativecommons.org/licenses/by/4.0/)**. You are

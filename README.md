@@ -11,7 +11,7 @@
   slide deck explains how to load data as a `QFeatures` object, 
   listing requirements and showing a real-case example. 
 
-- [Data processing with `scp`]() 
+- [Data processing with `scp`](https://bit.ly/scp_processing) 
   will introduce you to a few processing steps, providing for each step
   a general description, output plots and the code used to perform the
   processing. 
