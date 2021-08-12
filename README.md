@@ -8,7 +8,7 @@
   features?](http://bit.ly/qfeatures_intro) demonstrating the managing
   of quantitative proteomcis features.
 
-- The [read single-cell proteomics data](http://bit.ly/read_scp_data)
+- [Importing single-cell proteomics data](http://bit.ly/read_scp_data)
   slide deck explains how to load data as a `QFeatures` object, 
   listing requirements and showing a real-case example. 
 
