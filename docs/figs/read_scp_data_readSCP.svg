@@ -9,13 +9,13 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="224.20201mm"
-   height="72.991051mm"
-   viewBox="0 0 224.20201 72.991053"
+   width="225.23776mm"
+   height="72.852898mm"
+   viewBox="0 0 225.23776 72.8529"
    version="1.1"
    id="svg1081"
    inkscape:version="0.92.3 (2405546, 2018-03-11)"
-   sodipodi:docname="readSCP.svg"
+   sodipodi:docname="read_scp_data_readSCP.svg"
    inkscape:export-filename="/home/christophe/PhD/QFeaturesScpWorkshop2021/vignettes/figs/readSCP.png"
    inkscape:export-xdpi="505"
    inkscape:export-ydpi="505">
@@ -150,8 +150,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4"
-     inkscape:cx="394.47363"
-     inkscape:cy="114.52843"
+     inkscape:cx="385.17397"
+     inkscape:cy="114.52842"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -167,8 +167,8 @@
     <inkscape:grid
        type="xygrid"
        id="grid2683"
-       originx="-0.13587876"
-       originy="-77.967465" />
+       originx="0.89986676"
+       originy="-77.967467" />
   </sodipodi:namedview>
   <metadata
      id="metadata1078">
@@ -187,7 +187,7 @@
      inkscape:groupmode="layer"
      id="layer1"
      style="display:inline"
-     transform="translate(-24.975876,-4.0933088)">
+     transform="translate(-23.94013,-4.2314586)">
     <rect
        style="display:inline;opacity:1;vector-effect:none;fill:#d4aa00;fill-opacity:1;stroke:#666666;stroke-width:0.43742052;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect1626-5-33-60-0-4"
@@ -243,7 +243,7 @@
        inkscape:export-xdpi="505"
        inkscape:export-ydpi="505" />
     <rect
-       style="opacity:1;vector-effect:none;fill:#f2f2f2;fill-opacity:1;stroke:#666666;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;font-variant-east_asian:normal"
+       style="opacity:1;vector-effect:none;fill:#f2f2f2;fill-opacity:1;stroke:#666666;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect1626"
        width="16.524771"
        height="57.195663"
@@ -266,7 +266,7 @@
        x="185.88876"
        y="20.858532" />
     <rect
-       style="display:inline;opacity:1;vector-effect:none;fill:#fbefef;fill-opacity:1;stroke:#666666;stroke-width:0.43496034;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;font-variant-east_asian:normal"
+       style="display:inline;opacity:1;vector-effect:none;fill:#fbefef;fill-opacity:1;stroke:#666666;stroke-width:0.43496034;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect1626-5-33-2"
        width="2.6180315"
        height="24.518368"
@@ -308,7 +308,7 @@
        x="191.18402"
        y="34.481495" />
     <rect
-       style="display:inline;opacity:1;vector-effect:none;fill:#fff6ef;fill-opacity:1;stroke:#666666;stroke-width:0.44881693;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;font-variant-east_asian:normal"
+       style="display:inline;opacity:1;vector-effect:none;fill:#fff6ef;fill-opacity:1;stroke:#666666;stroke-width:0.44881693;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect1626-5-33-2-9"
        width="2.6180315"
        height="24.518368"
@@ -350,7 +350,7 @@
        x="196.47929"
        y="48.104473" />
     <rect
-       style="display:inline;opacity:1;vector-effect:none;fill:#fffbed;fill-opacity:1;stroke:#666666;stroke-width:0.43742052;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;font-variant-east_asian:normal"
+       style="display:inline;opacity:1;vector-effect:none;fill:#fffbed;fill-opacity:1;stroke:#666666;stroke-width:0.43742052;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect1626-5-33-2-9-9"
        width="2.6180315"
        height="24.518368"
@@ -445,12 +445,12 @@
          x="82.70974"
          y="21.286613"
          style="font-weight:bold;font-size:3.52777767px;line-height:1;text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke-width:0.26458332"
-         id="tspan2008">Columns</tspan><tspan
+         id="tspan2245">column</tspan><tspan
          sodipodi:role="line"
          x="82.70974"
          y="24.81439"
          style="font-weight:bold;font-size:3.52777767px;line-height:1;text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke-width:0.26458332"
-         id="tspan2245">Names</tspan></text>
+         id="tspan9849">names</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.41111112px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:vertical-lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
@@ -465,21 +465,21 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.41111112px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:vertical-lr;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="33.339394"
-       y="15.06214"
+       x="23.814384"
+       y="15.18995"
        id="text2002-5"
        inkscape:export-xdpi="505"
        inkscape:export-ydpi="505"><tspan
          sodipodi:role="line"
-         x="33.339394"
-         y="15.06214"
-         style="font-weight:bold;font-size:3.52777767px;line-height:1;text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke-width:0.26458332"
+         x="23.814384"
+         y="15.18995"
+         style="font-weight:bold;font-size:3.52777767px;line-height:1;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
          id="tspan2008-6">Feature</tspan><tspan
          sodipodi:role="line"
-         x="33.339394"
-         y="18.589918"
-         style="font-weight:bold;font-size:3.52777767px;line-height:1;text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke-width:0.26458332"
-         id="tspan2075">Metadata</tspan></text>
+         x="23.814384"
+         y="18.717728"
+         style="font-weight:bold;font-size:3.52777767px;line-height:1;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
+         id="tspan2075">annotations</tspan></text>
     <rect
        style="display:inline;opacity:1;vector-effect:none;fill:#999999;fill-opacity:1;stroke:#666666;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect1626-5-33-9"
@@ -709,7 +709,7 @@
        inkscape:export-ydpi="505"
        inkscape:export-filename="/home/christophe/PhD/QFeaturesScpWorkshop2021/vignettes/figs/sampleAnnotation.png" />
     <rect
-       style="display:inline;opacity:1;vector-effect:none;fill:#f2f2f2;fill-opacity:1;stroke:#666666;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;font-variant-east_asian:normal"
+       style="display:inline;opacity:1;vector-effect:none;fill:#f2f2f2;fill-opacity:1;stroke:#666666;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect1626-5"
        width="16.524771"
        height="47.104492"
@@ -738,22 +738,22 @@
        inkscape:export-filename="/home/christophe/PhD/QFeaturesScpWorkshop2021/vignettes/figs/sampleAnnotation.png" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.41111112px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:vertical-lr;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="50.405037"
-       y="14.98918"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.41111112px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:vertical-lr;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="45.113365"
+       y="15.095458"
        id="text2002-4"
        inkscape:export-xdpi="505"
        inkscape:export-ydpi="505"><tspan
          sodipodi:role="line"
-         x="50.894241"
-         y="14.98918"
-         style="font-weight:bold;font-size:3.52777767px;line-height:1;text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke-width:0.26458332"
+         x="45.113365"
+         y="15.095458"
+         style="font-weight:bold;font-size:3.52777767px;line-height:1;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
          id="tspan2004-0">Quant. </tspan><tspan
          sodipodi:role="line"
-         x="50.405037"
-         y="18.516956"
-         style="font-weight:bold;font-size:3.52777767px;line-height:1;text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke-width:0.26458332"
-         id="tspan2008-1">Data</tspan></text>
+         x="45.113365"
+         y="18.623236"
+         style="font-weight:bold;font-size:3.52777767px;line-height:1;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
+         id="tspan2008-1">columns</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.41111112px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:vertical-lr;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
@@ -772,7 +772,7 @@
          x="101.20294"
          y="24.67934"
          style="font-weight:bold;font-size:3.52777767px;line-height:1;text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke-width:0.26458332"
-         id="tspan2075-1">Metadata</tspan></text>
+         id="tspan2075-1">annotations</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.41111112px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:vertical-lr;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
@@ -784,7 +784,7 @@
          x="-45.808121"
          y="160.95148"
          style="font-weight:bold;font-size:3.52777767px;line-height:1;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
-         id="tspan2597">batch1</tspan></text>
+         id="tspan2597">acquis.1</tspan></text>
     <rect
        style="display:inline;opacity:1;vector-effect:none;fill:#f2f2f2;fill-opacity:1;stroke:#666666;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect1626-5-33-1-1"
@@ -868,7 +868,7 @@
        y="-227.31744"
        transform="rotate(90)" />
     <rect
-       style="display:inline;opacity:1;vector-effect:none;fill:#fff6ef;fill-opacity:1;stroke:#666666;stroke-width:0.44881693;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;font-variant-east_asian:normal"
+       style="display:inline;opacity:1;vector-effect:none;fill:#fff6ef;fill-opacity:1;stroke:#666666;stroke-width:0.44881693;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect1626-5-33-2-9-8"
        width="2.6180315"
        height="2.8321943"
@@ -916,7 +916,7 @@
        y="-227.31744"
        transform="rotate(90)" />
     <rect
-       style="display:inline;opacity:1;vector-effect:none;fill:#fffbed;fill-opacity:1;stroke:#666666;stroke-width:0.43742052;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;font-variant-east_asian:normal"
+       style="display:inline;opacity:1;vector-effect:none;fill:#fffbed;fill-opacity:1;stroke:#666666;stroke-width:0.43742052;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect1626-5-33-2-9-9-0"
        width="2.6180315"
        height="2.8321943"
@@ -956,7 +956,7 @@
        y="-227.31744"
        transform="rotate(90)" />
     <rect
-       style="display:inline;opacity:1;vector-effect:none;fill:#f2f2f2;fill-opacity:1;stroke:#666666;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;font-variant-east_asian:normal"
+       style="display:inline;opacity:1;vector-effect:none;fill:#f2f2f2;fill-opacity:1;stroke:#666666;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect1626-5-5"
        width="16.524771"
        height="47.104492"
@@ -977,7 +977,7 @@
          x="235.16675"
          y="18.997326"
          style="font-weight:bold;font-size:3.52777767px;line-height:1;text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke-width:0.26458332"
-         id="tspan2603">metadata</tspan></text>
+         id="tspan2603">annotations</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.41111112px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:vertical-lr;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
@@ -1015,30 +1015,30 @@
          id="flowPara5818" /></flowRoot>    <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.41111112px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:vertical-lr;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="29.889032"
-       y="7.6286659"
+       x="46.293213"
+       y="7.7668157"
        id="text2002-5-6"
        inkscape:export-xdpi="505"
        inkscape:export-ydpi="505"><tspan
          sodipodi:role="line"
-         x="29.889032"
-         y="7.6286659"
-         style="font-weight:bold;font-size:4.93888903px;line-height:1;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
-         id="tspan2075-5">Feature data</tspan></text>
+         x="46.293213"
+         y="7.7668157"
+         style="font-weight:bold;font-size:4.93888903px;line-height:1;text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke-width:0.26458332"
+         id="tspan2075-5">Input table</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.41111112px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:vertical-lr;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="73.123482"
-       y="8.2640371"
+       x="94.819336"
+       y="7.9031653"
        id="text2002-5-6-3"
        inkscape:export-xdpi="505"
        inkscape:export-ydpi="505"
        inkscape:export-filename="/home/christophe/PhD/QFeaturesScpWorkshop2021/vignettes/figs/sampleAnnotation.png"><tspan
          sodipodi:role="line"
-         x="73.123482"
-         y="8.2640371"
-         style="font-weight:bold;font-size:4.93888903px;line-height:1;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
-         id="tspan2075-5-4">Sample annotation</tspan></text>
+         x="94.819336"
+         y="7.9031653"
+         style="font-weight:bold;font-size:4.93888903px;line-height:1;text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke-width:0.26458332"
+         id="tspan2075-5-4">Sample table</tspan></text>
     <rect
        style="display:inline;opacity:1;vector-effect:none;fill:#c83737;fill-opacity:1;stroke:#666666;stroke-width:0.43496034;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect1626-5-33-17"
@@ -1170,51 +1170,51 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.41111112px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:vertical-lr;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="161.53677"
-       y="15.944707"
+       x="168.94501"
+       y="15.816892"
        id="text2002-5-7"
        inkscape:export-xdpi="505"
        inkscape:export-ydpi="505"><tspan
          sodipodi:role="line"
-         x="161.53677"
-         y="15.944707"
-         style="font-weight:bold;font-size:3.52777767px;line-height:1;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
+         x="168.94501"
+         y="15.816892"
+         style="font-weight:bold;font-size:3.52777767px;line-height:1;text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke-width:0.26458332"
          id="tspan2008-6-9">Feature</tspan><tspan
          sodipodi:role="line"
-         x="161.53677"
-         y="19.472485"
-         style="font-weight:bold;font-size:3.52777767px;line-height:1;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
-         id="tspan2075-3">Metadata</tspan></text>
+         x="168.94501"
+         y="19.344669"
+         style="font-weight:bold;font-size:3.52777767px;line-height:1;text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke-width:0.26458332"
+         id="tspan2075-3">annotations</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.41111112px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:vertical-lr;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="186.53493"
-       y="15.966237"
+       x="193.414"
+       y="15.859954"
        id="text2002-4-7"
        inkscape:export-xdpi="505"
        inkscape:export-ydpi="505"><tspan
          sodipodi:role="line"
-         x="186.53493"
-         y="15.966237"
-         style="font-weight:bold;font-size:3.52777767px;line-height:1;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
+         x="193.9032"
+         y="15.859954"
+         style="font-weight:bold;font-size:3.52777767px;line-height:1;text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke-width:0.26458332"
          id="tspan2004-0-8">Quant. </tspan><tspan
          sodipodi:role="line"
-         x="186.53493"
-         y="19.494015"
-         style="font-weight:bold;font-size:3.52777767px;line-height:1;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
-         id="tspan2008-1-7">Data</tspan></text>
+         x="193.414"
+         y="19.387732"
+         style="font-weight:bold;font-size:3.52777767px;line-height:1;text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke-width:0.26458332"
+         id="tspan2008-1-7">columns</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.41111112px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:vertical-lr;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="-59.212387"
-       y="165.42825"
+       x="-59.741554"
+       y="165.95741"
        id="text2002-4-6-4"
        transform="rotate(-90)"><tspan
          sodipodi:role="line"
-         x="-59.212387"
-         y="165.42825"
+         x="-59.741554"
+         y="165.95741"
          style="font-weight:bold;font-size:3.52777767px;line-height:1;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
-         id="tspan2597-1">batch2</tspan></text>
+         id="tspan2597-1">acquis.2</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.41111112px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:vertical-lr;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
@@ -1226,7 +1226,7 @@
          x="-73.084084"
          y="171.0979"
          style="font-weight:bold;font-size:3.52777767px;line-height:1;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
-         id="tspan2597-9">batch3</tspan></text>
+         id="tspan2597-9">acquis.3</tspan></text>
     <flowRoot
        xml:space="preserve"
        id="flowRoot2675"
@@ -1238,7 +1238,7 @@
            height="354.56354"
            x="445.47726"
            y="33.150646" /></flowRegion><flowPara
-         id="flowPara2681"></flowPara></flowRoot>    <path
+         id="flowPara2681" /></flowRoot>    <path
        style="fill:#dcdcdc;fill-opacity:1;stroke:#4e4e4e;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 111.73319,41.681355 v 7.9375 h 33.60208 v 3.96875 l 7.9375,-7.9375 -7.9375,-7.9375 v 3.96875 h -33.60208"
        id="path2685"
@@ -1269,7 +1269,7 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.41111112px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:vertical-lr;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="-39.561264"
+       x="-41.148766"
        y="90.703461"
        id="text2002-4-6-5"
        transform="rotate(-90)"
@@ -1277,14 +1277,14 @@
        inkscape:export-ydpi="505"
        inkscape:export-filename="/home/christophe/PhD/QFeaturesScpWorkshop2021/vignettes/figs/sampleAnnotation.png"><tspan
          sodipodi:role="line"
-         x="-39.561264"
+         x="-41.148766"
          y="90.703461"
          style="font-weight:bold;font-size:3.52777767px;line-height:1;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
-         id="tspan2597-8">batch1</tspan></text>
+         id="tspan2597-8">acquis.3</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.41111112px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:vertical-lr;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="-54.553032"
+       x="-56.669701"
        y="90.703461"
        id="text2002-4-6-4-8"
        transform="rotate(-90)"
@@ -1292,14 +1292,14 @@
        inkscape:export-ydpi="505"
        inkscape:export-filename="/home/christophe/PhD/QFeaturesScpWorkshop2021/vignettes/figs/sampleAnnotation.png"><tspan
          sodipodi:role="line"
-         x="-54.553032"
+         x="-56.669701"
          y="90.703461"
          style="font-weight:bold;font-size:3.52777767px;line-height:1;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
-         id="tspan2597-1-4">batch2</tspan></text>
+         id="tspan2597-1-4">acquis.2</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.41111112px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:vertical-lr;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="-71.070564"
+       x="-72.128899"
        y="90.703461"
        id="text2002-4-6-90-5"
        transform="rotate(-90)"
@@ -1307,52 +1307,52 @@
        inkscape:export-ydpi="505"
        inkscape:export-filename="/home/christophe/PhD/QFeaturesScpWorkshop2021/vignettes/figs/sampleAnnotation.png"><tspan
          sodipodi:role="line"
-         x="-71.070564"
+         x="-72.128899"
          y="90.703461"
          style="font-weight:bold;font-size:3.52777767px;line-height:1;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
-         id="tspan2597-9-6">batch3</tspan></text>
+         id="tspan2597-9-6">acquis.3</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.41111112px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:vertical-lr;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="-34.499256"
+       x="-37.145092"
        y="62.709801"
        id="text2002-4-6-5-5"
        transform="rotate(-90)"
        inkscape:export-xdpi="505"
        inkscape:export-ydpi="505"><tspan
          sodipodi:role="line"
-         x="-34.499256"
+         x="-37.145092"
          y="62.709801"
          style="font-weight:bold;font-size:3.52777767px;line-height:1;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
-         id="tspan2597-8-6">batch1</tspan></text>
+         id="tspan2597-8-6">acquisit.1</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.41111112px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:vertical-lr;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="-54.050663"
+       x="-56.167332"
        y="62.709801"
        id="text2002-4-6-4-8-8"
        transform="rotate(-90)"
        inkscape:export-xdpi="505"
        inkscape:export-ydpi="505"><tspan
          sodipodi:role="line"
-         x="-54.050663"
+         x="-56.167332"
          y="62.709801"
          style="font-weight:bold;font-size:3.52777767px;line-height:1;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
-         id="tspan2597-1-4-4">batch2</tspan></text>
+         id="tspan2597-1-4-4">acquisit.2</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.41111112px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:vertical-lr;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="-73.416901"
+       x="-75.533569"
        y="62.709801"
        id="text2002-4-6-90-5-8"
        transform="rotate(-90)"
        inkscape:export-xdpi="505"
        inkscape:export-ydpi="505"><tspan
          sodipodi:role="line"
-         x="-73.416901"
+         x="-75.533569"
          y="62.709801"
          style="font-weight:bold;font-size:3.52777767px;line-height:1;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
-         id="tspan2597-9-6-8">batch3</tspan></text>
+         id="tspan2597-9-6-8">acquisit.3</tspan></text>
     <rect
        style="display:inline;opacity:1;vector-effect:none;fill:#fffbed;fill-opacity:1;stroke:#666666;stroke-width:0.43742052;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect1626-5-33-3-1-4-0-7"
@@ -1363,7 +1363,7 @@
        inkscape:export-xdpi="505"
        inkscape:export-ydpi="505" />
     <rect
-       style="display:inline;opacity:1;vector-effect:none;fill:#fbefef;fill-opacity:1;stroke:#666666;stroke-width:0.43496034;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;font-variant-east_asian:normal"
+       style="display:inline;opacity:1;vector-effect:none;fill:#fbefef;fill-opacity:1;stroke:#666666;stroke-width:0.43496034;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect1626-5-33-3-13-1"
        width="2.6180315"
        height="2.8321943"
