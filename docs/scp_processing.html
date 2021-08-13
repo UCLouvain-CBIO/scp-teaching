@@ -305,6 +305,34 @@ plotTSNE(prots, colour_by = "Set")
 
 ---
 
+class: middle, inverse, center
+
+# Quick survey
+
+---
+
+class: middle
+
+## Set the correct filtering threshold
+
+Given the distribution of the median coefficient of variation per cell
+(n = 1000), where would you put a filtering threshold to remove 
+low-quality cells?
+
+&lt;img src="./figs/scp_processing_exercise.svg" width="50%" style="display: block; margin: auto;" /&gt;
+
+Suppose you have stored that threshold in `value`, which command would
+you used to remove low-quality cells?
+
+
+```r
+subsetByColData(scope2Data, scope2Data$medianCV &lt; value)
+subsetByColData(scope2Data, scope2Data$medianCV &gt; value)
+```
+
+
+---
+
 class: middle
 
 ### Further information

@@ -335,6 +335,60 @@ readSCP(inputTable,
 
 ---
 
+class: middle, inverse, center
+
+# Quick survey
+
+---
+
+class: middle
+
+## Fill the blanks
+
+.pull-left[
+
+`inputTable`
+
+```{r, echo = FALSE}
+coln <- paste0("lab", 1:2)
+m <- matrix(round(runif(6) * 1E4),
+            ncol = length(coln), 
+            dimnames = list(NULL, coln))
+df <- data.frame(MSrun = c("A", "A", "B"),
+                 Peptide = c("AYGGEGP", "QSRTSGRG", "QSRTSGRG"),
+                 m)
+datatable(df,
+          options = list(paging = FALSE,
+                         searching = FALSE,
+                         info = FALSE))
+```
+
+
+]
+.pull-right[
+
+`sampleTable`
+
+```{r, echo = FALSE}
+df <- data.frame(MSrun = c(rep("A", 4), rep("B", 2)),
+                 Label = c(rep(coln, 3)),
+                 CellType = rep(c("HeLa", "HEK293"), 3))
+datatable(df,
+          options = list(paging = FALSE,
+                         searching = FALSE,
+                         info = FALSE))
+```
+
+]
+
+```{r, eval = FALSE}
+readSCP(inputTable, sampleTable, 
+        batchCol = ...(A)...,  channelCol = ...(B)...)
+```
+
+
+---
+
 class: middle
 
 ### Further information
