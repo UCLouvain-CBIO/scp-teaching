@@ -343,7 +343,7 @@ class: middle, inverse, center
 
 class: middle
 
-#### What command creates a single-cell proteomics QFeatures object?
+#### Given the input and sample tables, What command creates a single-cell proteomics QFeatures object?
 
 .pull-left[
 
