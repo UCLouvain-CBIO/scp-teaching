@@ -337,13 +337,13 @@ readSCP(inputTable,
 
 class: middle, inverse, center
 
-# Quick survey
+# Exercise
 
 ---
 
 class: middle
 
-## Fill the blanks
+### Which command is correct?
 
 .pull-left[
 
@@ -383,7 +383,22 @@ datatable(df,
 
 ```{r, eval = FALSE}
 readSCP(inputTable, sampleTable, 
-        batchCol = ...(A)...,  channelCol = ...(B)...)
+        batchCol = "Label",  channelCol = c("lab1", "lab2"))
+```
+
+```{r, eval = FALSE}
+readSCP(inputTable, sampleTable, 
+        batchCol = "MSrun",  channelCol = c("lab1", "lab2"))
+```
+
+```{r, eval = FALSE}
+readSCP(inputTable, sampleTable, 
+        batchCol = "MSrun",  channelCol = "Label")
+```
+
+```{r, eval = FALSE}
+readSCP(inputTable, sampleTable, 
+        batchCol = "CellType",  channelCol = "Label")
 ```
 
 
