@@ -82,7 +82,7 @@ knitr::include_graphics('./figs/scp_processing_workflow.svg')
 
 A full reproduction of the workflow using `scp` and `QFeatures` is 
 available from our 
-[preprint](http://dx.doi.org/10.1101/2021.04.12.439408)[2] and 
+[preprint](http://dx.doi.org/10.1101/2021.04.12.439408) [2] and 
 [replication vignette](https://uclouvain-cbio.github.io/SCP.replication/articles/SCoPE2.html).
 
 <p style="color:grey;font-size:0.75em;">
@@ -119,9 +119,8 @@ class:
 .panelset[
 .panel[.panel-name[Description]
 
-<br> 
-PSM quality control removes low-quality PSMs so to **improve the reliability**
-of downstream analysis results.
+<br> PSM quality control removes low-quality PSMs to **improve the
+reliability** of downstream analysis results.
 
 <br> 
 **Example**: sample to carrier ratio
@@ -198,8 +197,8 @@ class:
 .panelset[
 .panel[.panel-name[Description]
 
-Single-cell quality control removes failed cell so to **improve the reliability**
-of downstream analysis results.
+<br> Single-cell quality control removes failed cell to **improve the
+reliability** of downstream analysis results.
 
 <br> 
 **Example**: median coefficient of variation
@@ -380,7 +379,7 @@ class: middle
 * Check out our prepint where we discuss the current challenges in 
   single-cell proteomics data anylysis: 
   http://dx.doi.org/10.1101/2021.04.12.439408)
-* Try it yourself in this free online workshop: 
+* Try it yourself in this online workshop: 
   https://lgatto.github.io/QFeaturesScpWorkshop2021/
 
 ### Funding
