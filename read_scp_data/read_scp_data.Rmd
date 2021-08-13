@@ -138,7 +138,7 @@ class:
 .panel[.panel-name[Description]
 .left-column[
 
-```{r echo=FALSE, out.width='100%', fig.align = 'center'}
+```{r echo=FALSE, out.width='90%', fig.align = 'center'}
 knitr::include_graphics('./figs/read_scp_data_sampleTable.png')
 ```
 
