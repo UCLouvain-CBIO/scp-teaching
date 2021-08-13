@@ -313,21 +313,18 @@ class: middle, inverse, center
 
 class: middle
 
-## Set the correct filtering threshold
-
-Given the distribution of the median coefficient of variation per cell,
-which command would you used to remove low-quality cells?
+#### Given the distribution of the median coefficient of variation per cell, what command would you used to remove low-quality cells?
 
 &lt;img src="./figs/scp_processing_exercise.svg" width="50%" style="display: block; margin: auto;" /&gt;
 
 
 ```r
-subsetByColData(scope2Data, scope2Data$medianCV &lt; 0.25)
-subsetByColData(scope2Data, scope2Data$medianCV &gt; 0.25)
-subsetByColData(scope2Data, scope2Data$medianCV &lt; 0.32)
-subsetByColData(scope2Data, scope2Data$medianCV &gt; 0.32)
-subsetByColData(scope2Data, scope2Data$medianCV &lt; 0.45)
-subsetByColData(scope2Data, scope2Data$medianCV &gt; 0.45)
+1. subsetByColData(scope2Data, scope2Data$medianCV &lt; 0.25)
+2. subsetByColData(scope2Data, scope2Data$medianCV &gt; 0.25)
+3. subsetByColData(scope2Data, scope2Data$medianCV &lt; 0.32)
+4. subsetByColData(scope2Data, scope2Data$medianCV &gt; 0.32)
+5. subsetByColData(scope2Data, scope2Data$medianCV &lt; 0.45)
+6. subsetByColData(scope2Data, scope2Data$medianCV &gt; 0.45)
 ```
 
 
