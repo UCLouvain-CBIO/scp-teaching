@@ -215,12 +215,44 @@ class: middle
 ### More with QFeatures and scp
 
 - quality control
-- feature and sample filtering
-- transformation and normalisation
-- imputation
+- feature and sample filtering, for example `filterFeatures()`
+- transformation and normalisation, for example `normalize()`, `logTransform()`
+- imputation with `impute()`
 - batch correction
 - visualisaton
 - the full R/Bioconductor  statistical learning toolkit
+
+
+---
+class: middle, center, inverse
+
+# Exercise
+
+---
+class: middle
+
+
+
+1. `joinAssays(); aggregateFeatures(); logTranform()`
+2. `logTransfrom(); joinAssays(); aggregateFeatures()`
+3. `aggregateFeaturesOverAssays(); logTransform(); joinAssays()`
+
+
+
+A.
+```{r echo=FALSE, out.width = "30%"}
+knitr::include_graphics('./figs/qf_plot_qst1.png')
+```
+B.
+```{r echo=FALSE, out.width = "30%"}
+knitr::include_graphics('./figs/qf_plot_qst2.png')
+```
+C.
+```{r echo=FALSE, out.width = "30%"}
+knitr::include_graphics('./figs/qf_plot_qst3.png')
+```
+
+
 
 ---
 class: middle
