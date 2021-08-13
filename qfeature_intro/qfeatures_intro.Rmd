@@ -231,12 +231,7 @@ class: middle, center, inverse
 ---
 class: middle
 
-
-
-1. `joinAssays(); aggregateFeatures(); logTranform()`
-2. `logTransfrom(); joinAssays(); aggregateFeatures()`
-3. `aggregateFeaturesOverAssays(); logTransform(); joinAssays()`
-
+#### Match the code to the `QFeatures` object structure.
 
 
 A.
@@ -252,6 +247,11 @@ C.
 knitr::include_graphics('./figs/qf_plot_qst3.png')
 ```
 
+```{r, eval = FALSE}
+1. joinAssays(); aggregateFeatures(); logTranform()
+2. logTransfrom(); joinAssays(); aggregateFeatures()
+3. aggregateFeaturesOverAssays(); logTransform(); joinAssays()
+```
 
 
 ---
