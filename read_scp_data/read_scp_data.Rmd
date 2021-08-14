@@ -483,7 +483,7 @@ I suggest to test your understanding with a small exercise.
 
 class: middle
 
-### Which command is correct?
+#### Given the input and sample tables, What command creates a single-cell proteomics QFeatures object?
 
 .pull-left[
 
@@ -522,23 +522,10 @@ datatable(df,
 ]
 
 ```{r, eval = FALSE}
-readSCP(inputTable, sampleTable, 
-        batchCol = "Label",  channelCol = c("lab1", "lab2"))
-```
-
-```{r, eval = FALSE}
-readSCP(inputTable, sampleTable, 
-        batchCol = "MSrun",  channelCol = c("lab1", "lab2"))
-```
-
-```{r, eval = FALSE}
-readSCP(inputTable, sampleTable, 
-        batchCol = "MSrun",  channelCol = "Label")
-```
-
-```{r, eval = FALSE}
-readSCP(inputTable, sampleTable, 
-        batchCol = "CellType",  channelCol = "Label")
+1. readSCP(inputTable, sampleTable, batchCol = "Label",  channelCol = c("lab1", "lab2"))
+2. readSCP(inputTable, sampleTable, batchCol = "MSrun",  channelCol = c("lab1", "lab2"))
+3. readSCP(inputTable, sampleTable, batchCol = "MSrun",  channelCol = "Label")
+4. readSCP(inputTable, sampleTable, batchCol = "CellType",  channelCol = "Label")
 ```
 
 
