@@ -54,12 +54,15 @@ any purpose, even commercially
 &lt;img height="20px" alt="CC-BY" src="https://raw.githubusercontent.com/UCLouvain-CBIO/scp-teaching/main/img/cc1.jpg" /&gt;.
 
 ???
-## Goals of the presentation
 
-- Understand how `readSCP()` converts data tables into `QFeatures`
-- Understand what the minimal requirements are for using `readSCP()`
-- Understand the different pieces of information in a `QFeatures` object
-- Understand what `readSCP()` does and how to use it 
+In this presentation, you will learn how to convert data tables into 
+`QFeatures` objects that can be used for data processing. 
+
+I highly recommend you to watch the previous video about handling
+quantitative proteomics features if that's not already done.
+
+The slides are available at the given link and are shared under CC-BY 
+license. 
 
 ---
 
@@ -67,23 +70,34 @@ class: middle, center, inverse
 
 # How can I convert my single-cell proteomics data to a QFeatures object?
 
+??? So the focus point of this presentation is answering this question:
+how can I convert my single-cell proteomics data to a QFeatures object?
+
 ---
 
 class: middle
 
 ## How can I convert my single-cell proteomics data to a QFeatures object?
 
-The `readSCP()` function converts quantified MS data tables to
-`QFeatures` objects. 
+The `readSCP()` function converts quantified mass spectrometry data 
+tables to `QFeatures` objects. 
 
 &lt;br&gt;
 &lt;img src="./figs/read_scp_data_readSCP.svg" width="90%" style="display: block; margin: auto;" /&gt;
+
+??? 
+A quick answer: thanks to the `readSCP()` function that converts 
+quantified MS data tables to `QFeatures` objects. 
+
+`readSCP()` takes an input table and a sample table and combines them
+into a ready-to-process `QFeatures` object. Let me explain what those
+two tables correspond to. 
 
 ---
 
 class: 
 
-## Feature data
+## Input table
 
 .panelset[
 .panel[.panel-name[Description]
@@ -102,27 +116,52 @@ In general, 3 types of columns:
 
 - feature annotations: *e.g.* peptide sequence, ion charge, protein name
 - quantification columns: 1 to n (depending on technology)
-- MS acquisition name: *e.g.* file name
+- acquisition data: *e.g.* file name
 
 ]
 ]
 .panel[.panel-name[Example]
 
-<div id="htmlwidget-e8002490c61bfd0511eb" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-e8002490c61bfd0511eb">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8"],["ATNFLAHEK","ATNFLAHEK","SHTILLVQPTK","SHTILLVQPTK","SHTILLVQPTK","SLVIPEK","SLVIPEK","VDREQLVQK"],[9,9,11,11,11,7,7,9],[2,2,2,2,2,2,2,2],[65.781,63.787,71.884,68.633,71.946,76.204,78.087,57.329],[0.00052636,0.00058789,4.0315e-24,4.7622e-06,6.8709e-09,0.053705,0.0595,0.004872],["P29692","P29692","P84090","P84090","P84090","P62269","P62269","P61981"],[61251,58648,150350,27347,84035,44895,179560,57895],[501.71,1099.8,3705,405.9,583.09,700.23,5385.4,603.73],[3731.3,2837.7,9361,1525.2,4092.3,2283,13670,2787.9],[1643.3,494.32,0,0,530.13,1109.6,690.53,757.17],[871.84,349.26,1945.4,0,718.13,0,3653.5,862.08],[981.87,1030.5,1188.6,318.74,2204.5,675.79,3624.9,1118.8],[1200.1,0,1574,0,960.51,0,5680.8,640.1],[939.06,1214.1,2302.1,519.81,453.77,809.38,5114.5,1446.1],[1457.5,800.58,2176.1,0,1188.4,668.88,4907.3,968.49],[1329.8,807.79,1399.5,507.23,740.99,1467.5,4584,648.56],[981.83,391.38,1307.5,370.79,0,901.38,4083.4,742.53],[null,null,2192.4,null,null,null,5221.5,null],[null,null,1791.4,null,null,null,4660.6,null],[null,null,1727.5,null,null,null,6841.6,null],[null,null,2157.3,null,null,null,6448.2,null],[null,null,1398,null,null,null,6412.6,null],["190321S_LCA10_X_FP97AG","190222S_LCA9_X_FP94BM","190914S_LCB3_X_16plex_Set_21","190222S_LCA9_X_FP94BM","190321S_LCA10_X_FP97AG","190222S_LCA9_X_FP94BM","190914S_LCB3_X_16plex_Set_21","190321S_LCA10_X_FP97AG"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Sequence<\/th>\n      <th>Length<\/th>\n      <th>Charge<\/th>\n      <th>Retention.time<\/th>\n      <th>PEP<\/th>\n      <th>Leading.razor.protein<\/th>\n      <th>Reporter.intensity.1<\/th>\n      <th>Reporter.intensity.2<\/th>\n      <th>Reporter.intensity.3<\/th>\n      <th>Reporter.intensity.4<\/th>\n      <th>Reporter.intensity.5<\/th>\n      <th>Reporter.intensity.6<\/th>\n      <th>Reporter.intensity.7<\/th>\n      <th>Reporter.intensity.8<\/th>\n      <th>Reporter.intensity.9<\/th>\n      <th>Reporter.intensity.10<\/th>\n      <th>Reporter.intensity.11<\/th>\n      <th>Reporter.intensity.12<\/th>\n      <th>Reporter.intensity.13<\/th>\n      <th>Reporter.intensity.14<\/th>\n      <th>Reporter.intensity.15<\/th>\n      <th>Reporter.intensity.16<\/th>\n      <th>Raw.file<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"scrollX":"200px","paging":false,"info":false,"columnDefs":[{"className":"dt-right","targets":[2,3,4,5,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-d432e50713eeba4ef259" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-d432e50713eeba4ef259">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8"],["ATNFLAHEK","ATNFLAHEK","SHTILLVQPTK","SHTILLVQPTK","SHTILLVQPTK","SLVIPEK","SLVIPEK","VDREQLVQK"],[9,9,11,11,11,7,7,9],[2,2,2,2,2,2,2,2],[65.781,63.787,71.884,68.633,71.946,76.204,78.087,57.329],[0.00052636,0.00058789,4.0315e-24,4.7622e-06,6.8709e-09,0.053705,0.0595,0.004872],["P29692","P29692","P84090","P84090","P84090","P62269","P62269","P61981"],[61251,58648,150350,27347,84035,44895,179560,57895],[501.71,1099.8,3705,405.9,583.09,700.23,5385.4,603.73],[3731.3,2837.7,9361,1525.2,4092.3,2283,13670,2787.9],[1643.3,494.32,0,0,530.13,1109.6,690.53,757.17],[871.84,349.26,1945.4,0,718.13,0,3653.5,862.08],[981.87,1030.5,1188.6,318.74,2204.5,675.79,3624.9,1118.8],[1200.1,0,1574,0,960.51,0,5680.8,640.1],[939.06,1214.1,2302.1,519.81,453.77,809.38,5114.5,1446.1],[1457.5,800.58,2176.1,0,1188.4,668.88,4907.3,968.49],[1329.8,807.79,1399.5,507.23,740.99,1467.5,4584,648.56],[981.83,391.38,1307.5,370.79,0,901.38,4083.4,742.53],[null,null,2192.4,null,null,null,5221.5,null],[null,null,1791.4,null,null,null,4660.6,null],[null,null,1727.5,null,null,null,6841.6,null],[null,null,2157.3,null,null,null,6448.2,null],[null,null,1398,null,null,null,6412.6,null],["190321S_LCA10_X_FP97AG","190222S_LCA9_X_FP94BM","190914S_LCB3_X_16plex_Set_21","190222S_LCA9_X_FP94BM","190321S_LCA10_X_FP97AG","190222S_LCA9_X_FP94BM","190914S_LCB3_X_16plex_Set_21","190321S_LCA10_X_FP97AG"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Sequence<\/th>\n      <th>Length<\/th>\n      <th>Charge<\/th>\n      <th>Retention.time<\/th>\n      <th>PEP<\/th>\n      <th>Leading.razor.protein<\/th>\n      <th>Reporter.intensity.1<\/th>\n      <th>Reporter.intensity.2<\/th>\n      <th>Reporter.intensity.3<\/th>\n      <th>Reporter.intensity.4<\/th>\n      <th>Reporter.intensity.5<\/th>\n      <th>Reporter.intensity.6<\/th>\n      <th>Reporter.intensity.7<\/th>\n      <th>Reporter.intensity.8<\/th>\n      <th>Reporter.intensity.9<\/th>\n      <th>Reporter.intensity.10<\/th>\n      <th>Reporter.intensity.11<\/th>\n      <th>Reporter.intensity.12<\/th>\n      <th>Reporter.intensity.13<\/th>\n      <th>Reporter.intensity.14<\/th>\n      <th>Reporter.intensity.15<\/th>\n      <th>Reporter.intensity.16<\/th>\n      <th>Raw.file<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"scrollX":"200px","paging":false,"info":false,"columnDefs":[{"className":"dt-right","targets":[2,3,4,5,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 
 ]
 ]
 
 ???
+### Description
 
-One column corresponds to several samples.
+The input table is typically a table that is generated by a 
+pre-processing software, such as MaxQuant (you may already have 
+encountered an `evidence.txt` file) or ProteomeDiscoverer (that creates
+files ending with `PSMs.txt`). 
 
-In label-free settings, there can be a single quantification column or
-the quantification results for each MS acquistion can be stored in 
-separated columns. When multiplexing, there are as many columns as 
-there are labels. 
+The input table usually contains 3 types of columns:
 
+- Columns that hold the feature annotation, think about the peptide
+  sequence, the charge of the ion analyzed by the mass spectrometer, the
+  protein name
+- You also have columns that hold the quantification data. The number
+  of columns may vary depending on the technology. In label-free 
+  settings, there can be a single quantification column or the 
+  quantification results for each acquisition can be stored in a
+  separated columns. When performing multiplexed experiments, there 
+  are as many columns as there are labels. 
+- The last type of columns are the data associated to the mass 
+  spectrometry acquisition, like for instance the name of file where
+  the instrument stored the data.
+
+Let's have a look how this looks like for real data
+
+### Example
+
+The first columns here are annotations of the features, with the 
+peptide sequence, its length, the ion charge, etc. Then, there is the 
+quantitative data, since all elements are numbers corresponding to ion
+intensities. You can identify the quantitative data in this specific
+example because the column names start with `Reporter.intensity.` 
+followed by a number. The last columns is the name of the acquisition
+and relates to the mass spectrometry run.
 
 ---
 
@@ -134,17 +173,19 @@ class:
 .panel[.panel-name[Description]
 .left-column[
 
-&lt;img src="./figs/read_scp_data_sampleTable.png" width="90%" style="display: block; margin: auto;" /&gt;
+&lt;img src="./figs/read_scp_data_sampleTable.png" width="80%" style="display: block; margin: auto;" /&gt;
 
 ]
 .right-column[
 
 Sample table = table generated by the researcher. 
 
+1 line = 1 sample
+
 Two columns are **required**:
 
 - Names of the quantification columns from the input table
-- MS acquisition name, same as in the input table
+- Acquisition name, same as in the input table
 
 Other columns can contain additional sample annotations, such as: 
 
@@ -159,23 +200,51 @@ Other columns can contain additional sample annotations, such as:
 ]
 .panel[.panel-name[Example]
 
-<div id="htmlwidget-1f913222602cfc92e1ff" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-1f913222602cfc92e1ff">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8"],["190222S_LCA9_X_FP94BM","190222S_LCA9_X_FP94BM","190222S_LCA9_X_FP94BM","190222S_LCA9_X_FP94BM","190222S_LCA9_X_FP94BM","190222S_LCA9_X_FP94BM","190222S_LCA9_X_FP94BM","190222S_LCA9_X_FP94BM"],["Reporter.intensity.1","Reporter.intensity.2","Reporter.intensity.3","Reporter.intensity.4","Reporter.intensity.5","Reporter.intensity.6","Reporter.intensity.7","Reporter.intensity.8"],["Carrier","Reference","Unused","Monocyte","Blank","Monocyte","Macrophage","Macrophage"],["LCA9","LCA9","LCA9","LCA9","LCA9","LCA9","LCA9","LCA9"],["s8","s8","s8","s8","s8","s8","s8","s8"],["N","N","N","N","N","N","N","N"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Raw.file<\/th>\n      <th>Channel<\/th>\n      <th>SampleType<\/th>\n      <th>lcbatch<\/th>\n      <th>sortday<\/th>\n      <th>digest<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"scrollX":"200px","paging":false,"info":false,"order":[],"autoWidth":false,"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}]}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-b5a63d69a3d8e5f3cc8f" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-b5a63d69a3d8e5f3cc8f">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8"],["190222S_LCA9_X_FP94BM","190222S_LCA9_X_FP94BM","190222S_LCA9_X_FP94BM","190222S_LCA9_X_FP94BM","190222S_LCA9_X_FP94BM","190222S_LCA9_X_FP94BM","190222S_LCA9_X_FP94BM","190222S_LCA9_X_FP94BM"],["Reporter.intensity.1","Reporter.intensity.2","Reporter.intensity.3","Reporter.intensity.4","Reporter.intensity.5","Reporter.intensity.6","Reporter.intensity.7","Reporter.intensity.8"],["Carrier","Reference","Unused","Monocyte","Blank","Monocyte","Macrophage","Macrophage"],["LCA9","LCA9","LCA9","LCA9","LCA9","LCA9","LCA9","LCA9"],["s8","s8","s8","s8","s8","s8","s8","s8"],["N","N","N","N","N","N","N","N"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Raw.file<\/th>\n      <th>Channel<\/th>\n      <th>SampleType<\/th>\n      <th>lcbatch<\/th>\n      <th>sortday<\/th>\n      <th>digest<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"scrollX":"200px","paging":false,"info":false,"order":[],"autoWidth":false,"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}]}},"evals":[],"jsHooks":[]}</script>
 
 ]
 ]
+
+???
+### Description
+
+Next to the input table, the `readSCP` function requires a sample table.
+This is generated by the researcher. Each line contains information 
+about a single sample. 
+
+2 columns are required to work with `readSCP`. The first column tells
+the software what are the names of the columns containing the 
+quantification data in the input table. The other column contains the
+acquisition names, just like we saw for the input table. 
+
+Beside those 2 required columns, you can include any sample data you
+have, be it experimental metadata, sample preparation information, 
+sample types or other data collected during sample preparation. These
+data are valuable when it comes to data modelling!
+
+### Example
+
+In this example, the 2 first columns are the required columns. The 
+first column is very similar to the column in the input data and may
+notice that the second column holds the names that I pointed out as
+quantitative columns in the input table. The remaining columns show you
+an example of additional information that could be available. 
 
 ---
 
 class: middle, center, inverse
 
-# What's happening under the hood?
+# What happens under the hood?
+
+???
+You may ask yourself: what is `readSCP` exactly doing?  
 
 ---
 
 class:
 
-## What's happening under the hood?
+## What happens under the hood?
 
 .panelset[
 .panel[.panel-name[Step1]
@@ -188,9 +257,9 @@ class:
 
 The feature annotations are separated from the quantitative data.
 
-The two table pieces are converted to a **Bioconductor** 
+The two table pieces are converted to a
 [`SingleCellExperiment`](https://www.bioconductor.org/packages/release/bioc/vignettes/SingleCellExperiment/inst/doc/intro.html)
-object [1], a specialized data container that creates an interface to 
+object [1], a specialized **Bioconductor** data container that creates an interface to 
 existing functions to analyse single-cell data.
 
 &lt;br&gt;&lt;br&gt;&lt;br&gt;
@@ -209,7 +278,7 @@ existing functions to analyse single-cell data.
 ]
 .right-column[
 
-The data is then split based on the MS acquisition. 
+The data is then split based on the acquisition name. 
 
 Each quantitative column now corresponds to a **single** and **unique**
 sample.
@@ -228,7 +297,7 @@ sample.
 The sample table is matched to the split feature data. This is 
 performed based on the two **required** columns:
 
-- MS acquisition name to match each data piece
+- Acquisition name to match each data piece
 - Quantification column names to match columns in each data piece
 
 **Unique sample IDs** are created
@@ -251,11 +320,50 @@ important for **downstream** data processing and visualisation.
 ]
 ]
 
+???
+Well, `readSCP` prepares the data in 4 main steps. 
+
+### Step1 
+
+First, it take the input table and separates the feature annotation 
+from the quantitative data. The two table can then be converted to a
+SingleCellExperiment object that is a specialized Bioconductor data 
+container that creates an interface to existing functions to analyse 
+single-cell data. 
+
+### Step2
+
+Next, the data is further split, but this time, the split is along the
+rows based on the mass spectrometry acquisition run. Because the 
+acquisitions are now separated, each quantitative column now corresponds
+to a single and unique sample. 
+
+### Step3
+
+In step3, the sample annotations are linked to the quantification data.
+this is performed based on the two required columns I just described. 
+First, the acquisition names are matched between the input table and 
+the sample table. Next, the quantitative columns names from the sample
+tables are used to link each sample to its corresponding quantification
+column. The combination of quantification column name and acquisition 
+name creates unique sample identifiers that are stored in the sample
+table. 
+
+### Step4
+
+The final step is to wrap all those data pieces into a `QFeatures`
+object. Overall, the QFeatures format enables seamless data management
+and access that are important for downstream data processing and 
+visualisation.
+
 ---
 
 class: middle, center, inverse
 
 # readSCP() in practice
+
+???
+Let me now show you how to use `readSCP` in practice
 
 ---
 
@@ -269,16 +377,16 @@ class:
 
 `sampleTable`
 
-<div id="htmlwidget-12dbdd908f62de286bf1" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-12dbdd908f62de286bf1">{"x":{"filter":"none","data":[["1","2","3","4","5","6"],["190222S_LCA9_X_FP94BM","190222S_LCA9_X_FP94BM","190222S_LCA9_X_FP94BM","190222S_LCA9_X_FP94BM","190222S_LCA9_X_FP94BM","190222S_LCA9_X_FP94BM"],["Reporter.intensity.1","Reporter.intensity.2","Reporter.intensity.3","Reporter.intensity.4","Reporter.intensity.5","Reporter.intensity.6"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Raw.file<\/th>\n      <th>Channel<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"scrollX":"200px","paging":false,"info":false,"order":[],"autoWidth":false,"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}]}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-28ae6459792610378284" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-28ae6459792610378284">{"x":{"filter":"none","data":[["1","2","3","4","5","6"],["190222S_LCA9_X_FP94BM","190222S_LCA9_X_FP94BM","190222S_LCA9_X_FP94BM","190222S_LCA9_X_FP94BM","190222S_LCA9_X_FP94BM","190222S_LCA9_X_FP94BM"],["Reporter.intensity.1","Reporter.intensity.2","Reporter.intensity.3","Reporter.intensity.4","Reporter.intensity.5","Reporter.intensity.6"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Raw.file<\/th>\n      <th>Channel<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"scrollX":"200px","paging":false,"info":false,"order":[],"autoWidth":false,"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}]}},"evals":[],"jsHooks":[]}</script>
 
 ]
 .pull-right[
 
 `inputTable`
 
-<div id="htmlwidget-9381a218a757f8815c21" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-9381a218a757f8815c21">{"x":{"filter":"none","data":[["1","2","3","4","5","6"],["190321S_LCA10_X_FP97AG","190222S_LCA9_X_FP94BM","190914S_LCB3_X_16plex_Set_21","190222S_LCA9_X_FP94BM","190321S_LCA10_X_FP97AG","190222S_LCA9_X_FP94BM"],[61251,58648,150350,27347,84035,44895],[501.71,1099.8,3705,405.9,583.09,700.23],[3731.3,2837.7,9361,1525.2,4092.3,2283],[1643.3,494.32,0,0,530.13,1109.6],[871.84,349.26,1945.4,0,718.13,0],[981.87,1030.5,1188.6,318.74,2204.5,675.79],[1200.1,0,1574,0,960.51,0],[939.06,1214.1,2302.1,519.81,453.77,809.38],[1457.5,800.58,2176.1,0,1188.4,668.88],[1329.8,807.79,1399.5,507.23,740.99,1467.5],[981.83,391.38,1307.5,370.79,0,901.38],[null,null,2192.4,null,null,null],[null,null,1791.4,null,null,null],[null,null,1727.5,null,null,null],[null,null,2157.3,null,null,null],[null,null,1398,null,null,null]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Raw.file<\/th>\n      <th>Reporter.intensity.1<\/th>\n      <th>Reporter.intensity.2<\/th>\n      <th>Reporter.intensity.3<\/th>\n      <th>Reporter.intensity.4<\/th>\n      <th>Reporter.intensity.5<\/th>\n      <th>Reporter.intensity.6<\/th>\n      <th>Reporter.intensity.7<\/th>\n      <th>Reporter.intensity.8<\/th>\n      <th>Reporter.intensity.9<\/th>\n      <th>Reporter.intensity.10<\/th>\n      <th>Reporter.intensity.11<\/th>\n      <th>Reporter.intensity.12<\/th>\n      <th>Reporter.intensity.13<\/th>\n      <th>Reporter.intensity.14<\/th>\n      <th>Reporter.intensity.15<\/th>\n      <th>Reporter.intensity.16<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"scrollX":"200px","paging":false,"info":false,"columnDefs":[{"className":"dt-right","targets":[2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-2ac7ce5980a52705d970" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-2ac7ce5980a52705d970">{"x":{"filter":"none","data":[["1","2","3","4","5","6"],["190321S_LCA10_X_FP97AG","190222S_LCA9_X_FP94BM","190914S_LCB3_X_16plex_Set_21","190222S_LCA9_X_FP94BM","190321S_LCA10_X_FP97AG","190222S_LCA9_X_FP94BM"],[61251,58648,150350,27347,84035,44895],[501.71,1099.8,3705,405.9,583.09,700.23],[3731.3,2837.7,9361,1525.2,4092.3,2283],[1643.3,494.32,0,0,530.13,1109.6],[871.84,349.26,1945.4,0,718.13,0],[981.87,1030.5,1188.6,318.74,2204.5,675.79],[1200.1,0,1574,0,960.51,0],[939.06,1214.1,2302.1,519.81,453.77,809.38],[1457.5,800.58,2176.1,0,1188.4,668.88],[1329.8,807.79,1399.5,507.23,740.99,1467.5],[981.83,391.38,1307.5,370.79,0,901.38],[null,null,2192.4,null,null,null],[null,null,1791.4,null,null,null],[null,null,1727.5,null,null,null],[null,null,2157.3,null,null,null],[null,null,1398,null,null,null]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Raw.file<\/th>\n      <th>Reporter.intensity.1<\/th>\n      <th>Reporter.intensity.2<\/th>\n      <th>Reporter.intensity.3<\/th>\n      <th>Reporter.intensity.4<\/th>\n      <th>Reporter.intensity.5<\/th>\n      <th>Reporter.intensity.6<\/th>\n      <th>Reporter.intensity.7<\/th>\n      <th>Reporter.intensity.8<\/th>\n      <th>Reporter.intensity.9<\/th>\n      <th>Reporter.intensity.10<\/th>\n      <th>Reporter.intensity.11<\/th>\n      <th>Reporter.intensity.12<\/th>\n      <th>Reporter.intensity.13<\/th>\n      <th>Reporter.intensity.14<\/th>\n      <th>Reporter.intensity.15<\/th>\n      <th>Reporter.intensity.16<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"scrollX":"200px","paging":false,"info":false,"columnDefs":[{"className":"dt-right","targets":[2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 
 ]
 ]
@@ -306,11 +414,43 @@ Overview of the resulting `QFeatures` object:
 ]
 ]
 
+???
+### Data
+
+Consider the two example tables here that are very similar to the ones I 
+showed previously. Note that both table contain the `Raw.file` column
+necessary for mathcing the acquisition runs. See also that the `Channel`
+column in the `sampleTable` contains the names of the quantification 
+column in the `inputTable`.
+
+### Code
+
+Well, you can convert those two tables to a `QFeatures` object using
+`readSCP()` by running the command shown here. We call `readSCP()`, we
+provide the 2 tables, but we also need to tell how the matching is 
+performed. We here tell the function which column in both tables 
+should be used to match the acquisition batch, in this case remember 
+it was `Raw.file`. Then, we need to tell the function which column in
+the sample table contains the quantification columns, it's the column
+called `Channel` in this example. 
+
+When running the command, we create a new object and I show the output
+here. You can see that we indeed have a `QFeatures` object with 4 assays
+because there are 4 acquisitions. Each assay is a SingleCellExperiment
+object with variable number of rows, here corresponding to PSMs and 16
+columns because a 16 label multiplexing was used to acquire the data. 
+
+I hope that you can now understand how to convert your single-cell 
+proteomics data into a `QFeatures` object. 
+
 ---
 
 class: middle, inverse, center
 
 # Exercise
+
+???
+I suggest to test your understanding with a small exercise. 
 
 ---
 
@@ -322,8 +462,8 @@ class: middle
 
 `inputTable`
 
-<div id="htmlwidget-f69cde20a242915d832b" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-f69cde20a242915d832b">{"x":{"filter":"none","data":[["1","2","3"],["A","A","B"],["AYGGEGP","QSRTSGRG","QSRTSGRG"],[2104,3711,5084],[5781,2010,4095]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>MSrun<\/th>\n      <th>Peptide<\/th>\n      <th>lab1<\/th>\n      <th>lab2<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"paging":false,"searching":false,"info":false,"columnDefs":[{"className":"dt-right","targets":[3,4]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-08b364bfe3ae4bb92551" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-08b364bfe3ae4bb92551">{"x":{"filter":"none","data":[["1","2","3"],["A","A","B"],["AYGGEGP","QSRTSGRG","QSRTSGRG"],[8880,9490,5966],[1062,1598,3287]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>MSrun<\/th>\n      <th>Peptide<\/th>\n      <th>lab1<\/th>\n      <th>lab2<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"paging":false,"searching":false,"info":false,"columnDefs":[{"className":"dt-right","targets":[3,4]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 
 
 ]
@@ -331,8 +471,8 @@ class: middle
 
 `sampleTable`
 
-<div id="htmlwidget-169e87433a88781ca772" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-169e87433a88781ca772">{"x":{"filter":"none","data":[["1","2","3","4","5","6"],["A","A","A","A","B","B"],["lab1","lab2","lab1","lab2","lab1","lab2"],["HeLa","HEK293","HeLa","HEK293","HeLa","HEK293"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>MSrun<\/th>\n      <th>Label<\/th>\n      <th>CellType<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"paging":false,"searching":false,"info":false,"order":[],"autoWidth":false,"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}]}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-017ddfed3939971328da" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-017ddfed3939971328da">{"x":{"filter":"none","data":[["1","2","3","4","5","6"],["A","A","A","A","B","B"],["lab1","lab2","lab1","lab2","lab1","lab2"],["HeLa","HEK293","HeLa","HEK293","HeLa","HEK293"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>MSrun<\/th>\n      <th>Label<\/th>\n      <th>CellType<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"paging":false,"searching":false,"info":false,"order":[],"autoWidth":false,"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}]}},"evals":[],"jsHooks":[]}</script>
 
 ]
 
