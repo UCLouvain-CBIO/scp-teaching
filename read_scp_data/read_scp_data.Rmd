@@ -85,7 +85,7 @@ combines an input table and a sample table into a ready-to-process
 
 ---
 
-class
+class:
 
 ## Input table
 
