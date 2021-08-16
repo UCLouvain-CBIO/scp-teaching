@@ -95,7 +95,7 @@ class: middle, center, inverse
 # What happens under the hood?
 
 ---
-class: 
+class:
 
 
 .panelset[
@@ -140,7 +140,7 @@ DT::datatable(cd)
 
 ]
 ---
-class: 
+class:
 
 #### Aggregating PSMs to peptides
 
@@ -158,7 +158,7 @@ qf <- aggregateFeaturesOverAssays(qf,
 ```
 
 ---
-class: 
+class:
 
 #### Joining peptide assays
 
@@ -173,7 +173,7 @@ qf <- joinAssays(qf,
 ```
 
 ---
-class: 
+class:
 
 #### Aggregate peptides into proteins
 
@@ -248,9 +248,9 @@ knitr::include_graphics('./figs/qf_plot_qst3.png')
 ```
 
 ```{r, eval = FALSE}
-1. joinAssays(); aggregateFeatures(); logTranform()
+1. aggregateFeaturesOverAssays(); logTransform(); joinAssays()
 2. logTransfrom(); joinAssays(); aggregateFeatures()
-3. aggregateFeaturesOverAssays(); logTransform(); joinAssays()
+3. joinAssays(); aggregateFeatures(); logTranform()
 ```
 
 
@@ -266,5 +266,3 @@ class: middle
 ### Funding
 
 Fonds de la Recherche Scientifique (FNRS), Belgium
-
-
