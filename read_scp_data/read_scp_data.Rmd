@@ -460,8 +460,61 @@ object with variable number of rows, here corresponding to different
 quantified PSMs and 16 columns because a multiplexing with 16 labels
 was used to acquire the data. 
 
-I hope that you can now understand how to convert your single-cell 
-proteomics data into a `QFeatures` object. 
+---
+
+class: middle, inverse, center
+
+# What if I acquired a single acquisition or already processed my data? 
+
+???
+As a mention, you can also import data from a single acquisition or 
+import already processed single-cell proteomics data. 
+
+---
+
+class: middle
+
+## What if I acquired a single acquisition or already processed my data? 
+
+`readQFeatures()`: import pre-processed data for a single acquisition 
+as a `QFeatures` object.
+
+```{r, eval=FALSE}
+readQFeatures(inputTable, ecol = paste0("Reporter.intensity.", 1:16),
+              colData = sampleTable)
+```
+
+`readSingleCellExperiment()`: import data as a `SingleCellExperiment`
+object. 
+
+```{r, eval=FALSE}
+readSingleCellExperiment(inputTable, ecol = paste0("Reporter.intensity.", 1:16),
+                         colData = sampleTable)
+```
+
+Both functions require:
+ - input table
+ - quantification column names
+ 
+Optional: sample annotation table. 
+
+???
+Suppose you acquired data from a single acquisition, you may not want 
+to bother with splitting your data using `readSCP()` but rather use 
+the simpler function `readQFeatures()`.
+
+Also, if you have already processed your data or if you downloaded data
+ready to analyse, you may simply want to load it as a 
+`SingleCellExperiment` object for downstream analyses (we will come to
+that in the next slide deck). You can do so using the `readSingleCellExperiment()`.
+
+Both functions require an input table, similar to `readSCP` and you need
+to point out which columns are the quantification columns. Optionally, you 
+can provide sample annotations.
+
+I hope this presentation helped you understand how to get your 
+single-cell proteomics data into R for data processing and analysis 
+using our software. 
 
 ---
 
