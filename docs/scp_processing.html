@@ -4,7 +4,6 @@
     <title>Data processing with scp</title>
     <meta charset="utf-8" />
     <meta name="author" content="Laurent Gatto and Christophe Vanderaa" />
-    <script src="scp_processing_files/header-attrs-2.10/header-attrs.js"></script>
     <script src="scp_processing_files/xaringanExtra-webcam-0.0.1/webcam.js"></script>
     <script id="xaringanExtra-webcam-options" type="application/json">{"width":"200","height":"200","margin":"1em"}</script>
     <link href="scp_processing_files/tile-view-0.2.6/tile-view.css" rel="stylesheet" />
@@ -48,21 +47,24 @@ any purpose, even commercially
 &lt;img height="20px" alt="CC-BY" src="https://raw.githubusercontent.com/UCLouvain-CBIO/scp-teaching/main/img/cc1.jpg" /&gt;.
 
 ???
-## Goals of the presentation
+In this presentation, I will discuss about data processing and will 
+show you how to perform two important steps: quality control at 
+feature level and quality control at sample level. I will also briefly
+mention and demonstrate how to perfor dimension reduction as an example
+of downstream analysis.
 
-- Get an overview of the SCoPE2 workflow and identify which steps are
-implemented in `QFeatures` and which steps are specific to `scp`
-- Understand PSM quality control and have a first look at how you can
-perform this with our software
-- Understand single-cell quality control and have a first look at how 
-you can perform this with our software
-- Get an example of downstream visualization
+The slides are available at the given link and are shared under CC-BY 
+license. 
 
 ---
 
 class: middle, inverse, center
 
 # How to process single-cell proteomics data? 
+
+???
+A burning question you might have once you acquired you single-cell
+proteomics data is: how should I process single-cell proteomics data?
 
 ---
 
@@ -91,18 +93,30 @@ the Analysis and Replication of Single-Cell Proteomics Data.” bioRxiv.
 &lt;/p&gt; 
 
 ???
-Blue boxes are implemented in `QFeatures` (common to bulk proteomics),
-the red boxes are implemented in `scp` because single-cell specific. 
+Answering this question is not trivial. While further research is 
+required to provide principled guidelines about single-cell proteomics 
+data processing, we can already rely on existing processing workflows.
+For instance, I show here the workflow from the SCoPE2 seminal paper 
+published by Nikolai's lab. 
 
-We will not be able to cover all steps due to time constraints
+There are many different steps. Steps shown in yellow are steps commonly
+applied to bulk proteomics and are therefore available from the `QFeatures`
+package. However, some steps are specific to single cells and the functions
+to performs them are available in the `scp` package. 
 
-We do not claim that the SCoPE2 workflow is the best possible workflow
+Due to time constrains, I won't cover all steps, but you can find a full
+reproduction of this workflow in our replication vignette and a discussion
+in our preprint. 
 
 ---
 
 class: middle, center, inverse
 
 # How to perform PSM quality control?
+
+???
+Let's start with one of the steps and let me show you how to perform 
+PSM quality control
 
 ---
 
@@ -160,17 +174,59 @@ Code for filtering:
 
 
 ```r
-scope2Data &lt;- filterFeatures(scope2Data, ~ PIF &gt; 0.8)
+scope2Data &lt;- filterFeatures(scope2Data, ~ SCR &lt; 0.1)
 ```
 
 ]
 ]
+
+???
+### Description 
+
+The objective of PSM quality control is to identify and remove 
+low-quality PSMs in order to improve the reliability of the downstream
+analysis results.
+
+Let me use an example of quality control: the sample to carrier
+ratio which is the signal from samples divided by the signal from
+carriers. Carriers can contain tens to hundreds of cell equivalent. The logic 
+is: when a PSM that exhibits a high ratio, meaning the signal in samples
+becomes close to the signal in carriers or even exceeds it, then this 
+means that an issues has occurred during acquisition and/or 
+quantification and we need to remove those PSMs. 
+
+### Plot
+
+Let's see an example distribution of the sample to carrier ratios.
+Most ratios are close to 1% as expected by the experimental design, 
+but you may have noticed there is a trail with much higher ratios. 
+Those indicate an issue and will be removed.
+
+### Code
+
+Let's quikcly see how to do that. More details about the code are 
+provided in the replication vignette. First, we need to compute the the sample to carrier ratio 
+using `computeSCR()`. It takes a `QFeatures` object and we tell how the
+samples and how the carriers are defined. The results are stored as 
+feature annotation, here called `SCR`. 
+
+Then, the second code shunk plots the distribution. We extract the feature 
+annotations and provide it to the `ggplot()` function for plotting. 
+This will create the plot I just showed. 
+
+The last command is how you can apply the filter. The `filterFeatures()`
+function takes the `QFeatures` object and a filtering statement, in this
+case we keep only features that have a ratio lower than 10\%.
 
 ---
 
 class: middle, center, inverse
 
 # How to perform single-cell quality control?
+
+???
+Similarly to what we just saw, I will now demonstrate the quality 
+control on single-cell samples.
 
 ---
 
@@ -214,7 +270,7 @@ scope2Data &lt;- medianCVperCell(scope2Data, i = 1:3, groupBy = "Leading.razor.p
                               colDataName = "medianCV", nobs = 6,  norm = "SCoPE2")
 ```
 
-Minimal code for plotting:
+Code for plotting:
 
 
 ```r
@@ -236,11 +292,58 @@ scope2Data &lt;- subsetByColData(scope2Data, scope2Data$medianCV &lt; 0.5)
 ]
 ]
 
+???
+### Description 
+
+The objective of single-cell quality control is to identify and remove 
+low-quality cells in order to improve the reliability of the downstream
+analysis results, just like for feature quality control.
+
+Again, let me use an example: The coefficient of variation measures 
+the robustness of quantification for a protein in a sample. Taking the
+median across a single cell provides an estimate of the robustness of 
+quantification within that single cell. Single cells with a high 
+median coefficient of variation indicate issues during acquisition and
+need to be removed.
+
+### Plot
+
+We can plot the distribution of the median coefficient of variation 
+computed for all single-cells. Including blank samples, that should
+theoretically contain mostly noise signal, helps to define a threshold
+where single cells are considered too noisy. Here you can see we set 
+the threshold at 0.5 to exclude all blank samples but this excludes 
+also a few low-quality single cells. 
+
+### Code 
+
+I here show you the code to perform the quality control, again split
+in three chunks. The first chunk computes the median coefficient of
+variation using the `medianCVperCell` function on a `QFeatures` object.
+Various arguments allow to control how the coefficients are computed. 
+The computed coefficients are directly stored in the `QFeatures` 
+object as sample annotation. 
+
+The second chunk shows how to create the plot I just showed. We retrieve
+the sample annotation and provide it to the `ggplot` function to 
+create the histogram. 
+
+The last chunk applies the filtering. `subsetByColData()` means that
+we take a subset of the samples based on the sample annotation. Here, we 
+select all samples that have a median coefficient of variation lower 
+than 0.5, the threshold we defined based on the blanks. 
+
+And so this is how to perform two of the many steps of the workflow. Again, 
+we a comprehensive demonstration is provided in the replication vignette.
+
 ---
 
 class: middle, inverse, center
 
 # What's next after data processing?
+
+???
+You may ask yourself: what can I do after data processing? 
 
 ---
 
@@ -303,17 +406,64 @@ plotTSNE(prots, colour_by = "Set")
 ]
 ]
 
+???
+### Description
+
+Once your data is processed, you are ready to perform downstream 
+analyses and that's were the fun begins! Common downstream analyses are
+for instance dimension reduction, cluster analysis, cluster annotation,
+differential protein abundance analysis and many more. 
+
+Most of the methods to perform single-cell analyses are actually 
+already available. We can directly apply those methods
+to our data because our data is contained in `SingleCellExperiment`
+objects within the `QFeatures` object. 
+
+As an example, let me demonstrate how to apply dimension reduction  
+using the `scater` package. 
+
+### Plot
+
+Here is a tSNE plot generated from an example protein data obtained by
+aggregating the PSMs to proteins without further processing. You can 
+see on this plot that the main source of variability is the acquisition
+batch, and this is often not desirable. So, a thorough data processing is critical for principled data 
+analysis in order to generate robust biological knowledge. If we do not correctly 
+model the data, we may pass through interesting information or focus 
+on confounding effects. 
+
+### Code
+
+Again, here is a bit of code to perform dimension reduction. First, we extract
+the data of interest from the `QFeatures` object. In this case, we 
+want the protein data using the `getWithColData(à` function that will
+also transfer all the available sample annotations that we use for 
+colouring the plot. 
+
+Next, we compute the tSNE after a little imputation of missing data by
+zero values. `runTSNE()` is a function from the `scater` package. 
+
+Finally, we generate the tSNE plot and colour it by the acquisition 
+set. Again, `plotTSNE()` is a function from `scater`. 
+
+I hope this presentation could help you understand how to perform 
+data processing using our software, namely quality control, and what 
+you could do with your data after processing.
+
 ---
 
 class: middle, inverse, center
 
 # Exercise
 
+???
+Let's know test your understanding with a small exercise.
+
 ---
 
 class: middle
 
-#### Given the distribution of the median coefficient of variation per cell, what command would you used to remove low-quality cells?
+#### Given the distribution of the median coefficient of variation per cell, what command would you use to remove low-quality cells?
 
 &lt;img src="./figs/scp_processing_exercise.svg" width="50%" style="display: block; margin: auto;" /&gt;
 
@@ -327,6 +477,14 @@ class: middle
 6. subsetByColData(scope2Data, scope2Data$medianCV &gt; 0.45)
 ```
 
+???
+Given the distribution of the median coefficient of variation per cell,
+what command would you use to remove low-quality cells? 
+
+Command 1, 2, 3, 4, 5 or 6? You can pause the video to think about it... 
+The solution is command 3. Setting a threshold at 0.32 best separates
+between blank samples and the single-cells and we are interested to
+keep samples with a low median coefficient of variation. 
 
 ---
 
@@ -345,6 +503,13 @@ class: middle
 ### Funding
 
 Fonds de la Recherche Scientifique (FNRS), Belgium
+    
+???
+I hope you found the correct solution. If you're looking for more 
+detailed information, you can have a look at our replication vignette
+and our preprint. If your interested to get your hands on our software,
+check out our online workshop! Thank you very much for watching and 
+see you in another video.
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
