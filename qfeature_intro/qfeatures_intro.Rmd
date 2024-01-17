@@ -2,7 +2,6 @@
 title: "Handling quantitative proteomics features?"
 subtitle: ""
 author: "Laurent Gatto and Christophe Vanderaa"
-date: "2021/08/10"
 output:
   xaringan::moon_reader:
     css: xaringan-themer.css

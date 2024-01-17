@@ -4,7 +4,7 @@
     <title>Handling quantitative proteomics features?</title>
     <meta charset="utf-8" />
     <meta name="author" content="Laurent Gatto and Christophe Vanderaa" />
-    <script src="qfeatures_intro_files/header-attrs-2.10/header-attrs.js"></script>
+    <script src="qfeatures_intro_files/header-attrs-2.25/header-attrs.js"></script>
     <script src="qfeatures_intro_files/xaringanExtra-webcam-0.0.1/webcam.js"></script>
     <script id="xaringanExtra-webcam-options" type="application/json">{"width":"200","height":"200","margin":"1em"}</script>
     <link href="qfeatures_intro_files/tile-view-0.2.6/tile-view.css" rel="stylesheet" />
@@ -13,24 +13,27 @@
     <link href="qfeatures_intro_files/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
     <link href="qfeatures_intro_files/panelset-0.2.6/panelset.css" rel="stylesheet" />
     <script src="qfeatures_intro_files/panelset-0.2.6/panelset.js"></script>
-    <script src="qfeatures_intro_files/htmlwidgets-1.5.3/htmlwidgets.js"></script>
-    <script src="qfeatures_intro_files/jquery-3.5.1/jquery.min.js"></script>
+    <script src="qfeatures_intro_files/htmlwidgets-1.6.4/htmlwidgets.js"></script>
     <link href="qfeatures_intro_files/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
-    <script src="qfeatures_intro_files/datatables-binding-0.18/datatables.js"></script>
-    <link href="qfeatures_intro_files/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
-    <link href="qfeatures_intro_files/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
-    <script src="qfeatures_intro_files/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
-    <link href="qfeatures_intro_files/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
-    <script src="qfeatures_intro_files/crosstalk-1.1.1/js/crosstalk.min.js"></script>
+    <script src="qfeatures_intro_files/datatables-binding-0.31/datatables.js"></script>
+    <script src="qfeatures_intro_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+    <link href="qfeatures_intro_files/dt-core-1.13.6/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <link href="qfeatures_intro_files/dt-core-1.13.6/css/jquery.dataTables.extra.css" rel="stylesheet" />
+    <script src="qfeatures_intro_files/dt-core-1.13.6/js/jquery.dataTables.min.js"></script>
+    <link href="qfeatures_intro_files/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet" />
+    <script src="qfeatures_intro_files/crosstalk-1.2.1/js/crosstalk.min.js"></script>
     <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
+.title[
 # Handling quantitative proteomics features?
+]
+.author[
 ### Laurent Gatto and Christophe Vanderaa
-### 2021/08/10
+]
 
 ---
 
@@ -125,15 +128,15 @@ function.
 
 .panel[.panel-name[assay]
 
-<div id="htmlwidget-3170e9fda9bdd62eefc0" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-3170e9fda9bdd62eefc0">{"x":{"filter":"none","data":[["PSM1","PSM2","PSM3","PSM4","PSM5","PSM6","PSM7","PSM8","PSM9","PSM10"],[1,2,3,4,5,6,7,8,9,10],[11,12,13,14,15,16,17,18,19,20],["","","","","","","","","",""],["SYGFNAAR","SYGFNAAR","SYGFNAAR","ELGNDAYK","ELGNDAYK","ELGNDAYK","IAEESNFPFIK","IAEESNFPFIK","IAEESNFPFIK","IAEESNFPFIK"],["ProtA","ProtA","ProtA","ProtA","ProtA","ProtA","ProtB","ProtB","ProtB","ProtB"],[1,2,3,4,5,6,7,8,9,10],["Mitochondrion","Mitochondrion","Mitochondrion","Mitochondrion","Mitochondrion","Mitochondrion","unknown","unknown","unknown","unknown"],[0.084,0.077,0.063,0.073,0.012,0.011,0.075,0.038,0.028,0.097]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>S1<\/th>\n      <th>S2<\/th>\n      <th>...<\/th>\n      <th>Sequence<\/th>\n      <th>Protein<\/th>\n      <th>Var<\/th>\n      <th>location<\/th>\n      <th>pval<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,2,6,8]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-671dcb094a2a9244a24d" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-671dcb094a2a9244a24d">{"x":{"filter":"none","vertical":false,"data":[["PSM1","PSM2","PSM3","PSM4","PSM5","PSM6","PSM7","PSM8","PSM9","PSM10"],[1,2,3,4,5,6,7,8,9,10],[11,12,13,14,15,16,17,18,19,20],["","","","","","","","","",""],["SYGFNAAR","SYGFNAAR","SYGFNAAR","ELGNDAYK","ELGNDAYK","ELGNDAYK","IAEESNFPFIK","IAEESNFPFIK","IAEESNFPFIK","IAEESNFPFIK"],["ProtA","ProtA","ProtA","ProtA","ProtA","ProtA","ProtB","ProtB","ProtB","ProtB"],[1,2,3,4,5,6,7,8,9,10],["Mitochondrion","Mitochondrion","Mitochondrion","Mitochondrion","Mitochondrion","Mitochondrion","unknown","unknown","unknown","unknown"],[0.08400000000000001,0.077,0.063,0.073,0.012,0.011,0.075,0.038,0.028,0.097]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>S1<\/th>\n      <th>S2<\/th>\n      <th>...<\/th>\n      <th>Sequence<\/th>\n      <th>Protein<\/th>\n      <th>Var<\/th>\n      <th>location<\/th>\n      <th>pval<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,2,6,8]},{"orderable":false,"targets":0},{"name":" ","targets":0},{"name":"S1","targets":1},{"name":"S2","targets":2},{"name":"...","targets":3},{"name":"Sequence","targets":4},{"name":"Protein","targets":5},{"name":"Var","targets":6},{"name":"location","targets":7},{"name":"pval","targets":8}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 
 ]
 
 .panel[.panel-name[colData]
 
-<div id="htmlwidget-d4a0ca8f196b1f176232" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-d4a0ca8f196b1f176232">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36"],["S1","S2","S3","S4","S5","S6","S7","S8","S9","S10","S11","S12","S13","S14","S15","S16","S17","S18","S19","S20","S21","S22","S23","S24","S25","S26","S27","S28","S29","S30","S31","S32","S33","S34","S35","S36"],["LC1","LC1","LC1","LC1","LC1","LC1","LC1","LC1","LC1","LC1","LC1","LC1","LC2","LC2","LC2","LC2","LC2","LC2","LC2","LC2","LC2","LC2","LC2","LC2","LC3","LC3","LC3","LC3","LC3","LC3","LC3","LC3","LC3","LC3","LC3","LC3"],["carrier","empty","cellA","cellB","cellC","blank","cellA","cellB","cellC","cellA","cellB","cellC","carrier","empty","cellA","cellB","cellC","blank","cellA","cellB","cellC","cellA","cellB","cellC","carrier","empty","cellA","cellB","cellC","blank","cellA","cellB","cellC","cellA","cellB","cellC"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>sample<\/th>\n      <th>LC_batch<\/th>\n      <th>type<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"order":[],"autoWidth":false,"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}]}},"evals":[],"jsHooks":[]}</script>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-49eac2ff8878390b1e07" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-49eac2ff8878390b1e07">{"x":{"filter":"none","vertical":false,"data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36"],["S1","S2","S3","S4","S5","S6","S7","S8","S9","S10","S11","S12","S13","S14","S15","S16","S17","S18","S19","S20","S21","S22","S23","S24","S25","S26","S27","S28","S29","S30","S31","S32","S33","S34","S35","S36"],["LC1","LC1","LC1","LC1","LC1","LC1","LC1","LC1","LC1","LC1","LC1","LC1","LC2","LC2","LC2","LC2","LC2","LC2","LC2","LC2","LC2","LC2","LC2","LC2","LC3","LC3","LC3","LC3","LC3","LC3","LC3","LC3","LC3","LC3","LC3","LC3"],["carrier","empty","cellA","cellB","cellC","blank","cellA","cellB","cellC","cellA","cellB","cellC","carrier","empty","cellA","cellB","cellC","blank","cellA","cellB","cellC","cellA","cellB","cellC","carrier","empty","cellA","cellB","cellC","blank","cellA","cellB","cellC","cellA","cellB","cellC"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>sample<\/th>\n      <th>LC_batch<\/th>\n      <th>type<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"orderable":false,"targets":0},{"name":" ","targets":0},{"name":"sample","targets":1},{"name":"LC_batch","targets":2},{"name":"type","targets":3}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 
 ]
 
@@ -302,6 +305,19 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     deleted = true;
   });
 })();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
 (function() {
   "use strict"
   // Replace <script> tags in slides area to make them executable
